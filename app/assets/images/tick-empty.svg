@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Tick</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tradeshow_Details" transform="translate(-322.000000, -262.000000)" fill="#160C28" fill-rule="nonzero">
+            <g id="Tick" transform="translate(322.000000, 262.000000)">
+                <g id="Group">
+                    <polygon id="Shape" points="8.44142857 11.7017857 6.78285714 10.0071429 5.50321429 11.2585714 8.61857143 14.4421429 14.4964286 6.63428571 13.0664286 5.55785714"></polygon>
+                    <path d="M10,0.251071429 C4.62428571,0.251071429 0.251071429,4.62428571 0.251071429,10 C0.251071429,15.3757143 4.62428571,19.7489286 10,19.7489286 C15.3757143,19.7489286 19.7489286,15.3757143 19.7489286,10 C19.7489286,4.62428571 15.3757143,0.251071429 10,0.251071429 Z M10,17.9589286 C5.61142857,17.9589286 2.04142857,14.3885714 2.04142857,10 C2.04142857,5.61142857 5.61142857,2.04142857 10,2.04142857 C14.3885714,2.04142857 17.9589286,5.61142857 17.9589286,10 C17.9589286,14.3885714 14.3885714,17.9589286 10,17.9589286 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
