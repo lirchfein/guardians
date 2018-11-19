@@ -1,0 +1,12 @@
+<h1>Guards#new</h1>
+<p>Find me in app/views/guards/new.html.erb</p>
+
+<%= simple_form_form(@guards) do |f| %>
+<%= f.input :name %>
+<%= f.input :specialty, collection: {Guard::SPECIALTIES} %>
+<%= f.input :location %>
+<%= f.input :rate %>
+<%= f.input :picture %>
+<%= f.submit %>
+<% end %>
+
