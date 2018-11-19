@@ -1,0 +1,23 @@
+.main-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.profile-pic {
+  background-image: url(obi-wan_kenobi.jpg);
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+}
+
+.middle-box {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    width: 80vw;
+    height: 90vh;
+    padding-top: 70px;
+}
