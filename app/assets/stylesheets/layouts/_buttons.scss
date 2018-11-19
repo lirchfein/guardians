@@ -1,0 +1,12 @@
+.btn-green {
+  background-color: $green;
+  font-family: $headers-font;
+  color: $letter-gray;
+  font-weight: bold;
+  border-radius: 25px;
+  &:hover {
+    border: solid 1px $green;
+    background-color: white;
+    color: $green;
+  }
+}
