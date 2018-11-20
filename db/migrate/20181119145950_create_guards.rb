@@ -7,7 +7,7 @@ class CreateGuards < ActiveRecord::Migration[5.2]
       t.integer :rate
       t.boolean :available, :default => true
       t.references :user, foreign_key: true
-      t.string :picture, :default
+      t.string :picture
 
       t.timestamps
     end

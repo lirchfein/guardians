@@ -1,11 +1,38 @@
 .profile {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
+  padding: 0 20px;
+}
+
+.profile.btn {
+  width: 20vw;
 }
 
 .profile-pic {
   width: 15vw;
   margin: 0 auto;
+}
+
+.atom {
+  position: absolute;
+  width: 14vw;
+  top: 842px;
+  left: 80px;
+}
+
+.bomb {
+  position: absolute;
+  width: 15vw;
+  top: 127px;
+  left: -25px;
+}
+
+.explosion {
+  position: absolute;
+  width: 14vw;
+  right: -15px;
+  top: 500px;
 }

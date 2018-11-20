@@ -4,6 +4,7 @@
   color: $letter-gray;
   font-weight: bold;
   border-radius: 25px;
+  transition: 0.25s ease;
   &:hover {
     border: solid 1px $green;
     background-color: white;

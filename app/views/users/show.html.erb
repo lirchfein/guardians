@@ -1,0 +1,34 @@
+<div class="profile">
+  <%= image_tag "bomb", class:"bomb" %>
+  <%= image_tag "explosion", class:"explosion" %>
+  <%= image_tag "atom", class:"atom" %>
+  <div class="container">
+    <%= image_tag "marton", alt: "alttext", class:'img-circle profile-pic' %>
+    <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+  </div>
+
+  <%= render 'components/tabs' %>
+
+  <div class="row list">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <%= render 'components/list-item' %>
+    </div>
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <%= render 'components/list-item' %>
+    </div>
+    <div class="col-xs-12 col-md-6 col-md-offset-3 completed">
+      <%= render 'components/list-item' %>
+    </div>
+    <div class="col-xs-12 col-md-6 col-md-offset-3 completed">
+      <%= render 'components/list-item' %>
+    </div>
+    <div class="col-xs-12 col-md-6 col-md-offset-3 completed">
+      <%= render 'components/list-item' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <%= link_to "BOOK ANOTHER HERO", '#', class:"btn btn-green btn-lg" %>
+    </div>
+  </div>
+</div>
