@@ -1,6 +1,6 @@
 class GuardsController < ApplicationController
   def index
-    raise
+
   end
 
   def new

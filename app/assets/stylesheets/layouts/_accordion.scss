@@ -1,0 +1,11 @@
+.toggle-text {
+  overflow: hidden;
+  height: 0px;
+  transition: height 0.4s ease-out;
+}
+
+.toggle-text-2 {
+  transition: height 0.4s ease-out;
+  height: 220px;
+  overflow: scroll;
+}
