@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'users/show'
   get 'bookings/create'
   devise_for :users
-  root to: 'guards#index'
+  root to: 'pages#home'
 
   resources :guards, only: [ :index, :show, :new, :create ] do
     resources :bookings, only: [ :create ]
