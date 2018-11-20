@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/show'
   get 'bookings/create'
   devise_for :users
   root to: 'guards#index'

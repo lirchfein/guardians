@@ -1,0 +1,40 @@
+.list {
+  margin-bottom: 20px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  p {
+    color: $green;
+  }
+}
+
+.list-pic {
+  width: 80px;
+  border-radius: 10%;
+}
+
+.list-content {
+  text-align: left;
+  flex: 1 0 auto;
+  margin-left: 15px;
+  h3 {
+    margin: 0 0 5px;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.completed {
+  color: $gray-secondary;
+  img {
+    opacity: 0.2;
+  }
+  p {
+    color: $gray-secondary;
+  }
+}
