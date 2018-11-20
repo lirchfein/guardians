@@ -5,6 +5,7 @@ class GuardsController < ApplicationController
 
   def new
     @guard = Guard.new
+    @specialties = Guard::SPECIALTIES
   end
 
   def show
