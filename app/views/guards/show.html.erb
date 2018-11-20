@@ -1,17 +1,21 @@
 
-<div class= 'main-box-guards'>
-
+<div class= 'main-box-guards background-white'>
   <div class="left-side-guards">
-    <div class="guard-pic">
+    <div class="guard-pic" style="background-image:
+         url('<%= cl_image_path @guard.picture, height: 300, width: 400, crop: :fill %>')">
     </div>
+  </div>
+
+  <div class="availability-render">
+    <%= render 'components/availability_symbol', guard: @guard %>
   </div>
 
   <div class="right-side-guards">
 
     <div class="guard-main-info">
-      <h1>Obi-Wan Kenobi</h1>
-      <p>Specialty: Dashingly Handsome</p>
-      <p>3500 $</p>
+      <h1><%= @guard.name %></h1>
+      <p class= 'specialty-text'>Specialty: <%= @guard.specialty.capitalize %></p>
+      <p class= 'specialty-text'><%= @guard.rate %> $</p>
       <button class= 'btn-green book-button-guard'>Book</button>
     </div>
 
