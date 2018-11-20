@@ -4,6 +4,8 @@ class Guard < ApplicationRecord
   has_many :bookings
   has_many :users, through: :bookings # , as: 'booker'
 
+  mount_uploader :photo, PhotoUploader
+
   SPECIALTIES = ['air', 'ground', 'water', 'loves cat', 'nice hair']
 
   validates :name, :specialty, :location, :rate, presence: true
