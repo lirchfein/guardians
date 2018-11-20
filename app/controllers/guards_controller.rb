@@ -11,6 +11,7 @@ class GuardsController < ApplicationController
 
   def show
     @guard = Guard.find(params[:id])
+
   end
 
   def create
