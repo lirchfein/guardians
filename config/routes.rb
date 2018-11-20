@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/show'
   get 'bookings/create'
   devise_for :users
   root to: 'guards#index'
@@ -6,6 +7,8 @@ Rails.application.routes.draw do
   resources :guards, only: [ :index, :show, :new, :create ] do
     resources :bookings, only: [ :create ]
   end
+
+  resources :users, only: [ :show]
 
   # need mission accomplished or not
 
