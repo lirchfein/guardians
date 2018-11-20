@@ -50,6 +50,15 @@
   padding: 7px;
 }
 
+#book-button-guard {
+  width: 75px;
+  transition: 0.25s ease;
+  padding: 7px;
+  background-color: $light-gray;
+  color: $gray-secondary;
+  border: 0px;
+}
+
 .accordion-button {
   width: 100%;
   background-color: inherit;
@@ -71,6 +80,8 @@
 
 .specialty-text {
   font-weight: bold;
+  opacity: 0.8;
+  margin-left: 8px;
 }
 
 .availability-render {
