@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  mount_uploader :avatar, PhotoUploader
   # has_many :guard, as: 'owned_guards'
   has_many :bookings, dependent: :destroy
   has_many :guards, through: :bookings # , as: 'rented_guards'
