@@ -1,0 +1,80 @@
+.main-box-guards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.guard-pic {
+  background-size: cover;
+  background-position: center;
+  height: 123%;
+  width: 50vw;
+  margin-top: -8vh;
+}
+
+.right-side-guards {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 35%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.left-side-guards {
+  height: 100%;
+}
+
+.guard-main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  margin: 55px 0;
+}
+
+.accordion-guard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.book-button-guard {
+  width: 75px;
+  transition: 0.25s ease;
+  padding: 7px;
+}
+
+.accordion-button {
+  width: 100%;
+  background-color: inherit;
+  border-radius: 0px;
+  border: 0px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &:hover{
+    border: 0px;
+    border-radius: 0px;
+  }
+}
+
+.initial-arrow-down {
+  transform: rotateZ(90deg);
+}
+
+.specialty-text {
+  font-weight: bold;
+}
+
+.availability-render {
+  position: absolute;
+  top: 10px;
+  right: 7.5%;
+}
