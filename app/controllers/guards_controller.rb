@@ -1,4 +1,5 @@
 class GuardsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
   def index
     @guards = Guard.all
   end
