@@ -22,7 +22,7 @@
   &:hover {
     text-decoration: none;
     h3 {
-      color: $green-secondary;
+      color: $green;
     }
   }
 }
@@ -53,6 +53,20 @@
 
 #tick-full {
   display: none;
+}
+
+#show-btn {
+  transition: 0.25s ease;
+  &:hover {
+    color: $green;
+  }
+}
+
+.show-less-booking {
+  display: none;
+  &.show-more {
+    display: block;
+  }
 }
 
 .completed {
