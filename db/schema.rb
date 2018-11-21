@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 2018_11_20_142549) do
     t.integer "rate"
     t.boolean "available", default: true
     t.string "picture"
-    t.string "default"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "cover"
