@@ -7,13 +7,10 @@
   border-radius: 5px;
 }
 .card-header {
-  height: 70%;
-  background-image: url(arya_cover);
-  background-size: cover !important;
-  background-position: top;
+  height: 80%;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  opacity: 0.4;
+  opacity: 1;
 
 }
 
@@ -25,6 +22,8 @@
 
 .guard-status {
   position: absolute;
+  color: white;
+  text-shadow: 1px 1px 2px black;
   font-size: 14px;
   right: 10px;
   top: 10px;
@@ -40,10 +39,12 @@
 .card-details {
   position: absolute;
   padding-left: 20px;
-  top: 104px;
+  top: 102px;
   h3 {
     margin: 5px 0 0 10px;
-    font-size: 25px
+    font-size: 25px;
+    color: #4DF67D;
+    text-shadow: 1px 1px 2px black;
   }
   p {
     font-size: 14px;

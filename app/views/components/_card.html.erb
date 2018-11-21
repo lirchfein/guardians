@@ -1,14 +1,17 @@
-<div class="card">
-  <div class="card-header">
+
+<div class="card" >
+  <div class="card-header" style ="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path guard.cover %>'); background-size: cover !important;
+  background-position: top;">
   </div>
   <div class="card-details">
     <div class="card-title">
-      <%= image_tag "arya", class:'img-thumbmnail card-pic' %>
+      <%= (cl_image_tag guard.picture, :height=>60, :width=>60, :crop=>"fill" ) %>
       <div>
-        <h3>Arya Stark</h3>
-        <p>Speciality: Faceless Women</p>
+        <h3><%= guard.name %></h3>
+        <p>Specialty: <%= guard.specialty %></p>
       </div>
     </div>
   </div>
   <p class="guard-status">ON DUTY <i class="fas fa-circle"></i></p>
 </div>
+
