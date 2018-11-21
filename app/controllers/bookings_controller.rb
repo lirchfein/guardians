@@ -10,6 +10,15 @@ class BookingsController < ApplicationController
     end
   end
 
+  def update
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.completed = true
+    @booking.save
+    @booking.guard.available = true
+    @booking.guard.save
+  end
+
   private
 
   def booking_params
