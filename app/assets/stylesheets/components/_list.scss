@@ -55,12 +55,6 @@
   display: none;
 }
 
-.tick-empty {
-  &:hover {
-    opacity: 0.3;
-  }
-}
-
 .completed {
   color: $gray-secondary;
   img {
@@ -75,7 +69,7 @@
   #tick-full {
     display: block;
   }
-  .tick-empty {
+  .btn-plain {
     display: none;
   }
 }

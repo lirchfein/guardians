@@ -1,5 +1,5 @@
 const changeToComplete = (event) => {
-  if (event.target.classList.contains("tick-empty")) {
+  if (event.target.classList.contains("btn-plain")) {
     event.currentTarget.classList.add("completed")
   }
 }

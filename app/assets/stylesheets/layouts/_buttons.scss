@@ -15,3 +15,11 @@
 .btn-large {
   width: 200px;
 }
+
+.btn-plain {
+  border: none;
+  font-size: 14px;
+  &:hover {
+    color: $green;
+  }
+}
