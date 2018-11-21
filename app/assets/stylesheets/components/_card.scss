@@ -5,6 +5,7 @@
   margin: 10px;
   box-shadow: 1px 1px 2px $light-gray;
   border-radius: 5px;
+  transition: 0.25s;
   img {
     box-shadow: 1px 1px 4px black;
   }
@@ -42,7 +43,7 @@
 .card-details {
   position: absolute;
   padding-left: 20px;
-  top: 102px;
+  bottom: 13px;
   h3 {
     margin: 5px 0 0 10px;
     font-size: 25px;
