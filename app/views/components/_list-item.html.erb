@@ -17,10 +17,10 @@
     <div>
       <%= form_for :booking, url: booking_path(booking), method: :patch do |f| %>
         <% button_tag( :class => "tick-button") do %>
-          <%= image_tag "tick-empty", class:'tick-empty'%>
+          <%= cl_image_tag "tick-empty", class:'tick-empty'%>
         <% end %>
       <% end %>
 
-      <%= image_tag "tick-full", id:'tick-full'%>
+      <%= cl_image_tag "tick-full", id:'tick-full'%>
     </div>
   </div>
