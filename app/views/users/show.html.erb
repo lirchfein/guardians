@@ -1,7 +1,11 @@
 <div class="profile">
-  <%= cl_image_tag "bomb", class:"bomb" %>
-  <%= cl_image_tag "explosion", class:"explosion" %>
-  <%= cl_image_tag "atom", class:"atom" %>
+  <%= cl_image_tag "bomb", id:"bomb" %>
+  <% if @user.bookings.length >= 1 %>
+    <%= cl_image_tag "explosion", id:"explosion" %>
+  <% end %>
+  <% if @user.bookings.length >= 5 %>
+    <%= cl_image_tag "atom", id:"atom" %>
+  <% end %>
   <div class="container profile-header">
     <%= cl_image_tag(@user.avatar, :transformation=>[
   {:width=>500, :height=>500, :gravity=>"face", :radius=>"max", :crop=>"crop"},

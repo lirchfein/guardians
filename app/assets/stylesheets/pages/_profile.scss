@@ -19,7 +19,14 @@
 }
 
 #profile-content {
+  margin-top: 15px;
   display: none;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
   &.show {
     display: block;
   }
@@ -32,23 +39,33 @@
  //resizing efforst? Image stays the same size for now
 }
 
-.atom {
+#atom {
   position: absolute;
   width: 14vw;
-  top: 842px;
+  //top: 842px;
+  bottom: -85px;
   left: 80px;
 }
 
-.bomb {
+#bomb {
   position: absolute;
   width: 15vw;
   top: 127px;
   left: -25px;
 }
 
-.explosion {
+#explosion {
   position: absolute;
   width: 14vw;
   right: -15px;
   top: 500px;
+}
+
+.profile-icon-view {
+  &#atom {
+    display: none;
+  }
+  &#explosion {
+    display: none;
+  }
 }

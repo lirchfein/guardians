@@ -5,7 +5,6 @@
 // }
 
 .sign-background {
-  background: url('https://res.cloudinary.com/dfcud6por/image/upload/v1542732279/static1.squarespace.com.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -18,21 +17,21 @@
 }
 
 .registration-background {
-  background: url('https://am24.akamaized.net/tms/cnt/uploads/2018/04/deadpool-1200x675.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  // background-size: cover;
   margin-top: -8vh;
   margin-bottom: -16vh;
-  // height: -webkit-fill-available;
   display: flex;
-  // justify-content: center;
+}
+
+.edit-background {
+  background: white;
 }
 
 .sign-box {
   background-color: $light-gray;
-  height: 440px;
+  // height: 440px;
   width: 600px;
   margin: auto;
   padding: 20px 30px;
@@ -41,7 +40,11 @@
 }
 
 .registration-box{
-  height: 750px;
+  // height: 750px;
+}
+
+.edit-box{
+  // height: 850px;
 }
 
 .links-block {
