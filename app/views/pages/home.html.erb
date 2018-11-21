@@ -1,1 +1,20 @@
 <%= render 'components/banner' %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <% current_guard = @guards.first %>
+      <%= link_to (render 'components/card', gua: current_guard), guard_path(current_guard.id) %>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <% current_guard = @guards.second %>
+      <%= link_to (render 'components/card', gua: current_guard), guard_path(current_guard.id) %>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <% current_guard = @guards.third %>
+      <%= link_to (render 'components/card', gua: current_guard), guard_path(current_guard.id) %>
+    </div>
+  </div>
+  <div class="button-center">
+    <%= link_to "SEE ALL HEROES", guards_path, class:"btn btn-green btn-lg" %>
+  </div>
+</div>
