@@ -12,6 +12,16 @@
   }
 }
 
+.list-link {
+  transition: 0.3 ease;
+  &:hover {
+    text-decoration: none;
+    h3 {
+      color: $green-secondary;
+    }
+  }
+}
+
 .list-pic {
   width: 80px;
   border-radius: 10%;
@@ -23,9 +33,21 @@
   margin-left: 15px;
   h3 {
     margin: 0 0 5px;
+    color: $letter-gray;
   }
   p {
     margin: 0;
+    color: $letter-gray;
+  }
+}
+
+#tick-full {
+  display: none;
+}
+
+.tick-empty {
+  &:hover {
+    opacity: 0.3;
   }
 }
 
@@ -34,7 +56,16 @@
   img {
     opacity: 0.2;
   }
+  h3 {
+    color: $gray-secondary;
+  }
   p {
     color: $gray-secondary;
+  }
+  #tick-full {
+    display: block;
+  }
+  .tick-empty {
+    display: none;
   }
 }
