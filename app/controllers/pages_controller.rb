@@ -3,4 +3,7 @@ class PagesController < ApplicationController
   def home
     @guards = Guard.all
   end
+
+  def authorization
+  end
 end

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :users, only: [ :show]
   resources :bookings, only: [ :update]
 
-  # get '/error_handler'
+  get '/authorization', to: 'pages#authorization'
 
   # need mission accomplished or not
 
