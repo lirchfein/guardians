@@ -2,29 +2,22 @@
   <%= image_tag "bomb", class:"bomb" %>
   <%= image_tag "explosion", class:"explosion" %>
   <%= image_tag "atom", class:"atom" %>
-  <div class="container">
-    <%= cl_image_tag @user.avatar, alt: "alttext", class:'img-circle profile-pic' %>
+  <div class="container profile-header">
+    <%= cl_image_tag(@user.avatar, :transformation=>[
+  {:width=>500, :height=>500, :gravity=>"face", :radius=>"max", :crop=>"crop"},
+  {:width=>200, :crop=>"scale"}
+  ]) %>
     <h1><%= @user.first_name %> <%= @user.last_name %></h1>
   </div>
 
   <%= render 'components/tabs' %>
 
   <div class="row list">
-    <div class="col-xs-12 col-md-6 col-md-offset-3">
-      <%= render 'components/list-item' %>
-    </div>
-    <div class="col-xs-12 col-md-6 col-md-offset-3">
-      <%= render 'components/list-item' %>
-    </div>
-    <div class="col-xs-12 col-md-6 col-md-offset-3 completed">
-      <%= render 'components/list-item' %>
-    </div>
-    <div class="col-xs-12 col-md-6 col-md-offset-3 completed">
-      <%= render 'components/list-item' %>
-    </div>
-    <div class="col-xs-12 col-md-6 col-md-offset-3 completed">
-      <%= render 'components/list-item' %>
-    </div>
+    <% @user.bookings.each do |booking| %>
+          <div class="col-xs-12 col-md-6 col-md-offset-3">
+            <%= render 'components/list-item', booking: booking %>
+          </div>
+    <% end %>
   </div>
   <div class="row">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
