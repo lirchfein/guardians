@@ -1,7 +1,7 @@
 <div class="profile">
-  <%= image_tag "bomb", class:"bomb" %>
-  <%= image_tag "explosion", class:"explosion" %>
-  <%= image_tag "atom", class:"atom" %>
+  <%= cl_image_tag "bomb", class:"bomb" %>
+  <%= cl_image_tag "explosion", class:"explosion" %>
+  <%= cl_image_tag "atom", class:"atom" %>
   <div class="container profile-header">
     <%= cl_image_tag(@user.avatar, :transformation=>[
   {:width=>500, :height=>500, :gravity=>"face", :radius=>"max", :crop=>"crop"},
