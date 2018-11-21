@@ -4,10 +4,13 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :guards, only: [ :index, :show, :new, :create ] do
-    resources :bookings, only: [ :create ]
+    resources :bookings, only: [ :create]
   end
 
   resources :users, only: [ :show]
+  resources :bookings, only: [ :update]
+
+  # get '/error_handler'
 
   # need mission accomplished or not
 

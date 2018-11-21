@@ -1,12 +1,26 @@
-<div class="list-item">
-  <div>
-    <%= image_tag "arya", class:'img-thumbmnail list-pic' %>
+<% if booking.completed %>
+  <div class="list-item completed">
+<% else %>
+  <div class="list-item">
+<% end %>
+    <%= cl_image_tag(booking.guard.picture, :width=>100, :height=>100, :crop=>"fill") %>
+    <div class="list-content">
+      <%= link_to guard_path(booking.guard), class: 'list-link' do %>
+        <h3><%= booking.guard.name %></h3>
+      <% end %>
+      <% if booking.completed %>
+        <p>MISSION ACCOMPLISHED</p>
+      <% else %>
+        <p>ON YOUR MISSION</p>
+      <% end %>
+    </div>
+    <div>
+      <%= form_for :booking, url: booking_path(booking), method: :patch do |f| %>
+        <% button_tag( :class => "tick-button") do %>
+          <%= image_tag "tick-empty", class:'tick-empty'%>
+        <% end %>
+      <% end %>
+
+      <%= image_tag "tick-full", id:'tick-full'%>
+    </div>
   </div>
-  <div class="list-content">
-    <h3>Arya Stark</h3>
-    <p>ON YOUR MISSION</p>
-  </div>
-  <%= link_to root_path do %>
-    <%= image_tag "tick-empty" %>
-  <% end %>
-</div>
