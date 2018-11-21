@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
+  after_action :store_location
+
   include Pundit
 
   # Adding last and first name to strong parmas
@@ -22,6 +24,23 @@ class ApplicationController < ActionController::Base
   def user_not_authorized
     flash[:alert] = "Sorry buddy, you are not allowed to go any further here."
     redirect_to(authorization_path)
+  end
+
+  protected
+
+  def after_sign_in_path_for(resource)
+    stored_location_for(resource)
+  end
+
+  def store_location
+    # store last url - this is needed for post-login redirect to whatever the user last visited.
+    if (request.fullpath != "/users/sign_in" &&
+        request.fullpath != "/users/sign_up" &&
+        request.fullpath != "/users/password" &&
+        request.fullpath != "/users/sign_out" &&
+        !request.xhr?) # don't store ajax calls
+      session["user_return_to"] = request.fullpath
+    end
   end
 
   private

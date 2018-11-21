@@ -15,11 +15,11 @@
       <% end %>
     </div>
     <div>
-      <%= form_for :booking, url: booking_path(booking), method: :patch do |f| %>
-        <% button_tag( :class => "tick-button") do %>
-          <%= cl_image_tag "tick-empty", class:'tick-empty'%>
+      <div>
+        <%= form_for :booking, url: booking_path(booking), method: :patch do |f| %>
+            <%= f.submit 'Mark Mission as completed', class: 'btn-plain no-padding' %>
         <% end %>
-      <% end %>
+      </div>
 
       <%= cl_image_tag "tick-full", id:'tick-full'%>
     </div>

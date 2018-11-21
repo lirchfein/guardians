@@ -7,9 +7,14 @@
   align-items: center;
   justify-content: space-between;
   margin: 10px 0;
+  transition: 0.25s ease;
   p {
     color: $green;
   }
+}
+
+#complete-form {
+  height: 0;
 }
 
 .list-link {
@@ -17,7 +22,7 @@
   &:hover {
     text-decoration: none;
     h3 {
-      color: $green-secondary;
+      color: $green;
     }
   }
 }
@@ -50,9 +55,17 @@
   display: none;
 }
 
-.tick-empty {
+#show-btn {
+  transition: 0.25s ease;
   &:hover {
-    opacity: 0.3;
+    color: $green;
+  }
+}
+
+.show-less-booking {
+  display: none;
+  &.show-more {
+    display: block;
   }
 }
 
@@ -70,7 +83,7 @@
   #tick-full {
     display: block;
   }
-  .tick-empty {
+  .btn-plain {
     display: none;
   }
 }
