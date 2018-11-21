@@ -1,44 +1,12 @@
 <div class="container">
   <div class="row">
+    <% @guards.each do |g| %>
     <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= render 'components/card' %>
+      <% @guard = g %>
+      <%= render 'components/card', guard: @guard %>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= render 'components/card' %>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= render 'components/card' %>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= render 'components/card' %>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= render 'components/card' %>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= render 'components/card' %>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= render 'components/card' %>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= render 'components/card' %>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= render 'components/card' %>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= render 'components/card' %>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= render 'components/card' %>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= render 'components/card' %>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <%= render 'components/card' %>
-    </div>
+    <% end %>
+
 
   </div>
 </div>
