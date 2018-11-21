@@ -4,7 +4,7 @@ class BookingsController < ApplicationController
     authorize @booking
 
     if @booking.save
-      redirect_to root_path
+      redirect_to user_path(current_user)
     else
       redirect_to root_path, notice: 'Guard on duty'
     end
