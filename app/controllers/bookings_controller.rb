@@ -8,6 +8,8 @@ class BookingsController < ApplicationController
     else
       redirect_to root_path, notice: 'Guard on duty'
     end
+    @booking.guard.available = false
+    @booking.guard.save
   end
 
   def update
