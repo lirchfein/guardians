@@ -22,17 +22,18 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  // background-size: cover;
   margin-top: -8vh;
   margin-bottom: -16vh;
-  // height: -webkit-fill-available;
   display: flex;
-  // justify-content: center;
+}
+
+.edit-background {
+  background: white;
 }
 
 .sign-box {
   background-color: $light-gray;
-  height: 440px;
+  // height: 440px;
   width: 600px;
   margin: auto;
   padding: 20px 30px;
@@ -41,7 +42,11 @@
 }
 
 .registration-box{
-  height: 750px;
+  // height: 750px;
+}
+
+.edit-box{
+  // height: 850px;
 }
 
 .links-block {
