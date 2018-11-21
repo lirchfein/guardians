@@ -22,6 +22,10 @@ const changeTab = (event) => {
   tabContents.forEach((tabContent) => {
     tabContent.classList.toggle('show');
   })
+  const explosion = document.getElementById('explosion');
+  explosion.classList.toggle('profile-icon-view');
+  const atom = document.getElementById('atom');
+  atom.classList.toggle('profile-icon-view');
 }
 
 function addEventListenerToTabs() {
