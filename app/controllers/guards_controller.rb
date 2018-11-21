@@ -11,8 +11,8 @@ class GuardsController < ApplicationController
   end
 
   def show
+    @user = current_user
     @guard = Guard.find(params[:id])
-
   end
 
   def create
