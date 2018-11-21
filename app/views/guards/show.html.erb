@@ -16,7 +16,9 @@
       <h1><%= @guard.name %></h1>
       <p class= 'specialty-text'>Specialty: <%= @guard.specialty.capitalize %></p>
       <p class= 'specialty-text'><%= @guard.rate %> $</p>
-      <button class= 'btn-green book-button-guard'>Book</button>
+      <%= form_for :booking, url: guard_bookings_path(@guard), method: :post do |f| %>
+        <%= f.submit 'Book', class: 'btn-green book-button-guard'%>
+      <% end %>
     </div>
 
     <div class="accordion-guard">

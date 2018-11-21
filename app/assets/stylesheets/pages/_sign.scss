@@ -17,6 +17,19 @@
   justify-content: center;
 }
 
+.registration-background {
+  background: url('https://am24.akamaized.net/tms/cnt/uploads/2018/04/deadpool-1200x675.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  // background-size: cover;
+  margin-top: -8vh;
+  margin-bottom: -16vh;
+  // height: -webkit-fill-available;
+  display: flex;
+  // justify-content: center;
+}
+
 .sign-box {
   background-color: $light-gray;
   height: 440px;
@@ -25,7 +38,10 @@
   padding: 20px 30px;
   border-radius: 25px;
   margin: 100px auto;
+}
 
+.registration-box{
+  height: 750px;
 }
 
 .links-block {
@@ -47,4 +63,9 @@
   font-size: 14px;
   opacity: 0.5;
   margin: 5px;
+}
+
+.form-control-file {
+  font-size: 14px;
+  opacity: 0.8;
 }
