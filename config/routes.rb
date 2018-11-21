@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'users/show'
-  # patch 'bookings/:id/update', to: 'bookings#update'
   devise_for :users
   root to: 'pages#home'
 
