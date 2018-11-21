@@ -21,12 +21,7 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to "#" do %>
-              <%= link_to "Add Hero", "#" %>
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "#" do %>
-              <%= link_to "Profile", "#" %>
+              <%= link_to "Profile", user_path(current_user) %>
               <% end %>
             </li>
           </ul>
