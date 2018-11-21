@@ -11,6 +11,23 @@
   width: 20vw;
 }
 
+#bookings-content {
+  display: none;
+  &.show {
+    display: block;
+  }
+}
+
+#profile-content {
+  display: none;
+  &.show {
+    display: block;
+  }
+  text-align: left;
+}
+
+
+
 .profile-header {
  //resizing efforst? Image stays the same size for now
 }
