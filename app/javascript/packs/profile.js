@@ -13,18 +13,29 @@ function addEventListenerToEmptyTick() {
 
 const changeTab = (event) => {
   event.preventDefault();
-  const tabs = document.querySelectorAll('.tab')
-  tabs.forEach((tab) => {
-    tab.classList.toggle('active');
-  })
-  const tabContents = document.querySelectorAll('.tab-content');
-  tabContents.forEach((tabContent) => {
-    tabContent.classList.toggle('show');
-  })
-  const explosion = document.getElementById('explosion');
-  //explosion.classList.toggle('profile-icon-view');
-  const atom = document.getElementById('atom');
-  atom.classList.toggle('profile-icon-view');
+  const activeTab = document.querySelectorAll('.active')[0];
+  const clickedTab = event.target
+
+  const activeTabContent = document.querySelectorAll('.' + activeTab.id)[0];
+  activeTabContent.classList.toggle('show');
+
+  const clickedTabContent = document.querySelectorAll('.' + clickedTab.id)[0];
+  clickedTabContent.classList.toggle('show');
+
+  activeTab.classList.toggle('active')
+  clickedTab.classList.toggle('active')
+
+  // trying to make explision only show on tabs, whose content is big enough
+  // but not required anymore as it seems.
+  // will leave code until finally decicded:
+
+  // const explosion = document.getElementById('explosion');
+  // const atom = document.getElementById('atom');
+  // if (clickedTab.id == ) {
+  //   atom.classList.add('profile-icon-view')
+  // } else {
+  //   atom.classList.('profile-icon-view')
+  // }
 }
 
 function addEventListenerToTabs() {
