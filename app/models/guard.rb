@@ -1,6 +1,5 @@
 class Guard < ApplicationRecord
-  mount_uploader :picture, PhotoUploader
-  mount_uploader :cover, PhotoUploader
+  mount_uploaders :picture, PictureUploader
 
   # belongs_to :user#, class_name: 'User'
   # belongs_to :owner, class_name: 'User', foreign_key: :user_id

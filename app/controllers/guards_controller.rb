@@ -21,13 +21,12 @@ class GuardsController < ApplicationController
 
   def create
     @guard = Guard.new(guard_params)
-    @guard.picture = current_user.avatar
     @guard.save
   end
 
   private
 
   def guard_params
-    params.require(:guard).permit(:name, :specialty, :location, :rate, :picture_cache, :cover_cache, :latitude, :longitude, :user_ids)
+    params.require(:guard).permit(:name, :specialty, :location, :rate, { picture: [] }, :latitude, :longitude, :user_ids)
   end
 end
