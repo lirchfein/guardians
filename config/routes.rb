@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   resources :users, only: [ :show]
   resources :bookings, only: [ :update]
 
-  get '/authorization', to: 'pages#authorization'
-  # need mission accomplished or not
+  patch '/bookings/:id/confirm', to: 'bookings#confirm', as: :confirm
+  patch '/bookings/:id/cancel', to: 'bookings#cancel', as: :cancel_booking
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/authorization', to: 'pages#authorization'
+
 end
