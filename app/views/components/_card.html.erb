@@ -1,11 +1,13 @@
 
 <div class="card" >
-  <div class="card-header" style ="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path gua.cover %>'); background-size: cover !important;
+  <div class="card-header" style ="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= gua.picture[1].url %>); background-size: cover !important;
   background-position: top;">
   </div>
   <div class="card-details">
     <div class="card-title">
-      <%= (cl_image_tag gua.picture, :height=>60, :width=>60, :crop=>"fill" ) %>
+      <div class="card-guard-avatar">
+        <%= image_tag gua.picture[0].url %>
+       </div>
       <div>
         <h3><%= gua.name %></h3>
         <p>Specialty: <%= gua.specialty %></p>

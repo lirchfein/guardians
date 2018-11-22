@@ -12,7 +12,6 @@ class GuardsController < ApplicationController
 
   def new
     @guard = Guard.new
-    @specialties = Guard::SPECIALTIES
   end
 
   def show
@@ -28,6 +27,6 @@ class GuardsController < ApplicationController
   private
 
   def guard_params
-    params.require(:guard).permit(:name, :specialty, :location, :rate, :picture)
+    params.require(:guard).permit(:name, :specialty, :location, :rate, { picture: [] }, :latitude, :longitude, :user_ids)
   end
 end

@@ -2,7 +2,7 @@
 <div class= 'main-box-guards background-white'>
   <div class="left-side-guards">
     <div class="guard-pic" style="background-image:
-         url('<%= cl_image_path @guard.picture, height: 300, width: 400, crop: :fill %>')">
+         url(<%= @guard.picture[0].url %>)">
     </div>
   </div>
 

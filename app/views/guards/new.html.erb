@@ -1,13 +1,6 @@
-<h1>Guards#new</h1>
-<p>Find me in app/views/guards/new.html.erb</p>
 
-  <%= simple_form_for(@guard) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :specialty, collection: Guard::SPECIALTIES %>
-  <%= f.input :location %>
-  <%= f.input :rate %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit %>
+<% if params[:secret_id] == 'true' %>
+  <%= render 'components/secret_identity_form' %>
+<% else %>
+  <%= render 'components/current_identity_form' %>
 <% end %>
-

@@ -1,4 +1,6 @@
 class Guard < ApplicationRecord
+  mount_uploaders :picture, PictureUploader
+
   # belongs_to :user#, class_name: 'User'
   # belongs_to :owner, class_name: 'User', foreign_key: :user_id
   has_many :bookings, dependent: :destroy
@@ -6,6 +8,7 @@ class Guard < ApplicationRecord
   belongs_to :user
 
   # mount_uploader :photo, PhotoUploader
+
 
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?

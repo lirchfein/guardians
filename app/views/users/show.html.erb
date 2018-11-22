@@ -50,8 +50,31 @@
       <p>First Name: <%= @user.first_name %></p>
       <p>Last Name: <%= @user.last_name %></p>
       <p>Email: <%= @user.email %></p>
+      <button class= 'btn btn-green' data-toggle="modal" data-target="#secret-id-check">Become a Guardian!</button>
       <%= link_to "Edit Profile", edit_user_registration_path(@user), class:'.btn-green'%>
     </div>
+<!-- --------------------------------------MODAL--------------------------------------------------------- -->
+      <div class="modal fade" id="secret-id-check" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Become a Guardian!</h4>
+            </div>
+            <div class="modal-body">
+              Select whether to use your current identity or create a secret identity!
+              <div class="identity-selecter-buttons">
+                <%= button_to "Current Identity", new_guard_path, :class => "btn btn-green", :method => :get, params: {secret_id: false} %>
+                <%= button_to "Secret Identity", new_guard_path, :class => "btn btn-green", :method => :get, params: {secret_id: true} %>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn-green modal-close-button" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- --------------------------------------------------------------------------------------------------- -->
   </div>
   <div id="guard-content" class="guard-tab">
     <h1>hello</h1>
