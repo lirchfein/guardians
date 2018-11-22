@@ -9,7 +9,7 @@ class Guard < ApplicationRecord
 
   SPECIALTIES = ['drunkard', 'faceless', 'pocket-sized', 'strong', 'nice hair', 'flies']
 
-  validates :name, :specialty, :location, :rate, :address, presence: true
+  validates :name, :specialty, :location, :rate, presence: true
   validates :name, uniqueness: true
   validates :specialty, inclusion: { in: SPECIALTIES }
 end
