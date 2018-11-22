@@ -21,7 +21,12 @@ class GuardsController < ApplicationController
 
   def create
     @guard = Guard.new(guard_params)
-    @guard.save
+    @guard.user_id = current_user.id
+    if @guard.save
+      redirect_to user_path(current_user)
+    else
+      render 'new'
+    end
   end
 
   private
