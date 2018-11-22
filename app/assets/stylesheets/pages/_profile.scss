@@ -18,6 +18,15 @@
   }
 }
 
+#guard-content {
+  margin-top: 15px;
+  padding-bottom: 40vh;
+  display: none;
+  &.show {
+    display: block;
+  }
+}
+
 #profile-content {
   margin-top: 15px;
   padding-bottom: 40vh;
@@ -33,8 +42,6 @@
   }
   text-align: left;
 }
-
-
 
 .profile-header {
  //resizing efforst? Image stays the same size for now

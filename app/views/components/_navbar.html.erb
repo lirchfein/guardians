@@ -7,6 +7,16 @@
     <h1>Guardians</h1>
   </div>
 
+  <div class="search">
+    <%= form_tag guards_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a guard", autocomplete:"off"
+      %>
+    <% end %>
+  </div>
+
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 

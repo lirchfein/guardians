@@ -14,9 +14,9 @@
     <h1><%= @user.first_name %> <%= @user.last_name %></h1>
   </div>
 
-  <%= render 'components/tabs' %>
+  <%= render 'components/tabs', user: @user %>
 
-  <div id='bookings-content' class='show tab-content'>
+  <div id='bookings-content' class='show booking-tab'>
     <div class="row list">
       <% @open_bookings.each do |booking| %>
         <div class="col-xs-12 col-md-6 col-md-offset-3">
@@ -45,7 +45,7 @@
       </div>
     </div>
   </div>
-  <div id="profile-content" class="tab-content">
+  <div id="profile-content" class="profile-tab">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
       <p>First Name: <%= @user.first_name %></p>
       <p>Last Name: <%= @user.last_name %></p>
@@ -75,5 +75,8 @@
         </div>
       </div>
 <!-- --------------------------------------------------------------------------------------------------- -->
+  </div>
+  <div id="guard-content" class="guard-tab">
+    <h1>hello</h1>
   </div>
 </div>

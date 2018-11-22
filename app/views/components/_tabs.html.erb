@@ -1,12 +1,17 @@
 <div class="row">
   <div class="col-xs-12 col-md-6 col-md-offset-3">
     <div class="tabs">
-      <a class="tab booking active" href="#">
-        MY BOOKINGS
+      <a class="tab active" id="booking-tab" href="#">
+        BOOKED MISSIONS
       </a>
-      <a class="tab profile" href="#">
+      <a class="tab profile" id="profile-tab" href="#">
         PROFILE
       </a>
+      <% if user.guard %>
+        <a class="tab guard" id="guard-tab" href="#">
+          GUARD LIFE
+        </a>
+      <% end %>
     </div>
   </div>
 </div>

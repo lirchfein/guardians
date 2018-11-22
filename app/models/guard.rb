@@ -10,9 +10,20 @@ class Guard < ApplicationRecord
 
   # mount_uploader :photo, PhotoUploader
 
- #  SPECIALTIES = ['drunkard', 'faceless', 'pocket-sized', 'strong', 'nice hair', 'flies']
- # :specialty,
-  validates :name, :location, :rate, presence: true
+
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
+
+  SPECIALTIES = ['drunkard', 'faceless', 'pocket-sized', 'strong', 'nice hair', 'flies']
+
+  validates :name, :specialty, :location, :rate, presence: true
   validates :name, uniqueness: true
-  # validates :specialty, inclusion: { in: SPECIALTIES }
+  validates :specialty, inclusion: { in: SPECIALTIES }
+
+  include PgSearch
+  pg_search_scope :search_by_name_and_specialty,
+                  against: [:name, :specialty],
+                  using: {
+                    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+                        }
 end
