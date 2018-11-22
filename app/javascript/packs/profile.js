@@ -57,7 +57,9 @@ const changeShownBookings = (event) => {
 
 function addEventListenerShowMore() {
   const showBtn = document.getElementById('show-btn');
+  if (showBtn) {
   showBtn.addEventListener('click', changeShownBookings);
+  }
 }
 
 

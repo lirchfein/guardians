@@ -70,3 +70,24 @@
     display: none;
   }
 }
+
+.identity-selecter-buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  align-self: center;
+  margin-top: 20px;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close-button {
+  width: 75px;
+  transition: 0.25s ease;
+  padding: 7px;
+  background-color: $gray-secondary;
+  border: 0px;
+}
