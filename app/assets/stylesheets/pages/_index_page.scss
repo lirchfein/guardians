@@ -1,0 +1,19 @@
+.main-container {
+  display: flex;
+}
+
+.index-cards-container {
+  width: 60%;
+  h2 {
+    margin: 7px 0px 0px 25px;
+  }
+}
+
+.map-container {
+  width: 40%;
+  height: 100vh;
+  margin-left: 40px;
+  h2 {
+    margin-top: 7px;
+  }
+}

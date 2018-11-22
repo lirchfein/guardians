@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Contrail+One|Roboto" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
+    <%= stylesheet_pack_tag "map" %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
@@ -17,6 +18,7 @@
       <%= render 'components/footer' %>
       <%= javascript_include_tag 'application' %>
       <%= javascript_pack_tag 'application' %>
+      <%= javascript_pack_tag "map" %>
     </div>
   </body>
 </html>

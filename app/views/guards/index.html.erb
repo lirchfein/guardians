@@ -1,13 +1,24 @@
-<div class="container">
-  <div class="row">
-    <% @guards.each do |g| %>
-    <div class="col-xs-12 col-sm-6 col-md-4">
+<div class="container main-container">
+  <div class="index-cards-container">
+    <div class="row">
+      <h2>All Heroes</h2>
+      <% @guards.each do |g| %>
+      <div class="col-xs-12 col-sm-6 col-md-6">
 
-      <%= link_to (render 'components/card', gua: g), guard_path(g.id) %>
+        <%= link_to (render 'components/card', gua: g), guard_path(g.id) %>
+      </div>
+      <% end %>
     </div>
-    <% end %>
-
-
+  </div>
+  <div class="map-container">
+    <h2>Superhero HQs in Berlin</h2>
+    <div
+      id="map"
+      style="width: 100%;
+      height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
   </div>
 </div>
 
