@@ -20,11 +20,11 @@
       <div>
         <% if !booking.confirmed %>
           <%= form_for :booking, url: cancel_booking_path(booking), method: :patch do |f| %>
-              <%= f.submit 'Cancel', class: 'btn-plain no-padding' %>
+              <%= f.submit 'Cancel', class: 'btn-plain no-padding cancel-btn' %>
           <% end %>
         <% else %>
           <%= form_for :booking, url: booking_path(booking), method: :patch do |f| %>
-              <%= f.submit 'Mark Mission as completed', class: 'btn-plain no-padding' %>
+              <%= f.submit 'Mark Mission as completed', class: 'btn-plain no-padding complete-btn' %>
           <% end %>
         <% end %>
       </div>
