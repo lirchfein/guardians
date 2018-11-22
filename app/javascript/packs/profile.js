@@ -6,8 +6,12 @@ const changeToComplete = (event) => {
     event.currentTarget.classList.add("canceled");
   }
   else if (event.target.classList.contains("accept-btn")) {
+    const acceptedForm = document.getElementById('accept-partial');
+    document.body.appendChild(acceptedForm);
     const form = document.getElementById('accept-form');
-    form.innerHTML = '<form action="/bookings/9" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="bt3/xx95v3w3T5IxV1Xua2LvEq8nGxrgdqx0QbT+PRh6izUp/7VAXJmagJXAFXNjVI/O72Ts3xn4EbvFU5Dmng=="><input type="submit" name="commit" value="Mark Mission as completed" class="btn-plain no-padding complete-btn" data-disable-with="Mark Mission as completed"></form>'
+    form.innerHTML = '<form action="/bookings/9" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="bt3/xx95v3w3T5IxV1Xua2LvEq8nGxrgdqx0QbT+PRh6izUp/7VAXJmagJXAFXNjVI/O72Ts3xn4EbvFU5Dmng=="><input type="submit" name="commit" value="Mark Mission as completed" class="btn-plain no-padding complete-btn" data-disable-with="Mark Mission as completed"></form>';
+    const mission_status = document.getElementById('mission-status');
+    mission_status.innerText = "MISSION ONGOING"
   }
 }
 

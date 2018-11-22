@@ -11,13 +11,13 @@
       <% elsif booking.confirmed %>
         <p>MISSION ONGOING</p>
       <% else %>
-        <p>PENDING REQUEST</p>
+        <p id='mission-status'>PENDING REQUEST</p>
       <% end %>
     </div>
     <div>
       <div id='accept-form'>
         <% if !booking.confirmed %>
-          <%= form_for :booking, url: confirm_path(booking), method: :patch do |f| %>
+          <%= form_for :booking, url: confirm_path(booking), method: :patch, html: {id: 'accept-partial'} do |f| %>
               <%= f.submit 'Accept Mission', class: 'btn-plain no-padding accept-btn' %>
           <% end %>
           <%= form_for :booking, url: cancel_booking_path(booking), method: :patch do |f| %>
