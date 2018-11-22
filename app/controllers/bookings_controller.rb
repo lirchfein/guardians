@@ -8,8 +8,9 @@ class BookingsController < ApplicationController
     else
       redirect_to root_path, notice: 'Guard on duty'
     end
-    @booking.guard.available = false
-    @booking.guard.save
+    # those steps will happen after the confirm action
+    # @booking.guard.available = false
+    # @booking.guard.save
   end
 
   def update
@@ -19,6 +20,21 @@ class BookingsController < ApplicationController
     @booking.save
     @booking.guard.available = true
     @booking.guard.save
+  end
+
+  def confirm
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.confirmed = true
+    @booking.save
+    @booking.guard.available = false
+    @booking.guard.save
+  end
+
+  def cancel
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.destroy
   end
 
   private

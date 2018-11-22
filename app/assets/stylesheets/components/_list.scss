@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 10px 0;
-  transition: 0.25s ease;
+  transition: 0.8s ease;
   p {
     color: $green;
   }
@@ -86,4 +86,8 @@
   .btn-plain {
     display: none;
   }
+}
+
+.canceled {
+  display: none;
 }
