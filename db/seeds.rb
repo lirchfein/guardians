@@ -21,13 +21,14 @@ u3 = User.create!(first_name: 'Wiebke', last_name: 'Rost', email: 'wi@lewagon.co
 
 puts "creating guards..."
 #guard = Guard.create!(user_id: 1, name: 'Legolas', specialty: 'nice hair', available: false, location: 'Treptower Park', rate: 5000, picture: 'https://res.cloudinary.com/dfcud6por/image/upload/c_fill,h_700,w_700/v1542721286/legolas_profile.jpg', cover: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542720254/Legolas.jpg')
-a = Guard.new(user_id: u1.id, name: 'Darth Vader', specialty: 'faceless', location: 'Alexanderplatz', rate: 700000 )
+
+a = Guard.new(user_id: u1.id, name: 'Darth Vader', specialty: 'faceless', location: 'Alexanderplatz', rate: 700000, description: 'Smart guy, but breathing issues' )
 a.remote_picture_urls = ['https://res.cloudinary.com/dfcud6por/image/upload/c_fill,h_700,w_700/v1542715217/Darth_Vader.jpg', 'https://res.cloudinary.com/dfcud6por/image/upload/v1542722276/Star-Wars-Darth-Vader-Wallpaper.jpg']
-a.save!
-b = Guard.new(user_id: u2.id, name: 'Gimli', specialty: 'pocket-sized', location: 'Moritzplatz, Berlin', rate: 4000 )
+a.save
+b = Guard.new(user_id: u2.id, name: 'Gimli', specialty: 'pocket-sized', location: 'Moritzplatz, Berlin', rate: 4000, description: 'Gimli is really small' )
 b.remote_picture_urls = [ 'https://res.cloudinary.com/dfcud6por/image/upload/c_fill,h_700,w_700/v1542715218/gimli.jpg', 'https://res.cloudinary.com/dfcud6por/image/upload/v1542722276/Gimli_cover.jpg']
-b.save!
-c = Guard.new(user_id: u3.id, name: 'Bronn', specialty: 'drunkard', location: 'Berliner Dom', rate: 500)
+b.save
+c = Guard.new(user_id: u3.id, name: 'Bronn', specialty: 'drunkard', location: 'Berliner Dom', rate: 500, description: 'Bronn is a top bloke')
 c.remote_picture_urls = ['https://res.cloudinary.com/dfcud6por/image/upload/c_fill,h_700,w_700/v1542715217/bronn.jpg', 'https://res.cloudinary.com/dfcud6por/image/upload/v1542722274/Bronn-game-of-thrones-22077692-1024-576.png' ]
 c.save!
 #Guard.create!(user_id: 5, name: 'Thor', specialty: 'strong', location: 'Kottbusser Tor', rate: 70000, picture: 'https://res.cloudinary.com/dfcud6por/image/upload/c_fill,h_700,w_700/v1542721686/thor-profile.jpg', cover: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542715221/thor.jpg')
