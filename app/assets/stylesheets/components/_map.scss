@@ -11,9 +11,12 @@
   fill: #4DF67D;
 }
 
-
 .popup-image {
-  width: 200;
-  height: 120;
-  crop: :fill;
+  img {
+  margin-top: 10px;
+  height: 120px;
+  width: 200px;
+  crop: fill;
+
+  }
 }
