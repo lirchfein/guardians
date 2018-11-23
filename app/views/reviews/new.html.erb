@@ -1,1 +1,20 @@
+<div class="registration-background" style='background-image: url("<%= cl_image_path 'deadpool-1200x675' %>");'>
+  <div class="sign-box registration-box">
 
+    <h2>Create Review</h2>
+
+    <%= simple_form_for(@review, url: guard_reviews_path) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :content, required: true %>
+        <%= f.input :rating, collection: [1, 2, 3, 4, 5], required: true %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Review", class:'btn-green btn-large' %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
