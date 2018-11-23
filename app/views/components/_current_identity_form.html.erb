@@ -7,11 +7,14 @@
 
       <div class="form-inputs">
         <%= f.input :name, input_html: {value: "#{current_user.first_name} #{current_user.last_name}"}%>
-        <%= f.input :specialty %>
+        <%= f.input :specialty, placeholder: "For example: Strong, Flying, Invisibilty."%>
         <%= f.input :rate %>
-        <%= f.file_field :picture, multiple: true , label: 'Profile Picture'%>
-        <%= f.file_field :picture, multiple: true, label: 'Cover Photo' %>
+        <%= f.label 'Profile Picture' %>
+        <%= f.file_field :picture, multiple: true%>
+        <%= f.label 'Cover Photo' %>
+        <%= f.file_field :picture, multiple: true%>
         <%= f.input :location, label: 'Head Quarter Location' %>
+        <%= f.input :description %>
       </div>
 
       <div class="form-actions">

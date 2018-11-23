@@ -48,6 +48,6 @@ class GuardsController < ApplicationController
   private
 
   def guard_params
-    params.require(:guard).permit(:name, :specialty, :location, :rate, { picture: [] }, :latitude, :longitude, :user_ids)
+    params.require(:guard).permit(:name, :specialty, :location, :rate, { picture: [] }, :latitude, :longitude, :user_ids, :description)
   end
 end
