@@ -9,14 +9,15 @@
 }
 
 #query {
-  color: #575756;
-  background-color: transparent;
+  color: $letter-gray;
+  font-family: Roboto;
+  background-color: $light-gray;
   background-image: url(http://mihaeltomic.com/codepen/input-search/ic_search_black_24px.svg);
   background-repeat: no-repeat;
   background-size: 18px 18px;
   background-position: 95% center;
   border-radius: 50px;
-  border: 1px solid #575756;
+  border: 1px solid $letter-gray;
   transition: all 250ms ease-in-out;
   // backface-visibility: hidden;
   transform-style: preserve-3d;
