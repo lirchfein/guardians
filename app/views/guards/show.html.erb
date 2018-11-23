@@ -15,7 +15,8 @@
     <div class="guard-main-info">
       <h1><%= @guard.name %></h1>
       <p class= 'specialty-text'>Specialty: <%= @guard.specialty.capitalize %></p>
-      <p class= 'specialty-text'><%= @guard.rate %> $</p>
+      <p class= 'specialty-text'>Head Quarter: <%= @guard.location.capitalize %></p>
+      <p class= 'specialty-text rate'><%= @guard.rate %> $</p>
       <%= form_for :booking, url: guard_bookings_path(@guard), method: :post do |f| %>
         <%= f.submit 'Book', class: 'btn-green book-button-guard'%>
       <% end %>
@@ -26,7 +27,7 @@
         <button class= "accordion-button btn-green" id= 'guardian-description'>Description
           <i class="fas fa-caret-right initial-arrow-down"></i>
         </button>
-        <p class= 'toggle-text'>Obi-wan is a friendly chap, often greeting people with his catchphrase: 'Hello There'. Despite many a roumor, his cousins name is infact not Obi-two, but Jared. Obi wan is a talented strategist, duellist and singer. In his freetime he likes to reminisce over his ol' buddy Qui-Gonn and all the fun they used to have.</p>
+        <p class= 'toggle-text'><%= @guard.description %></p>
       </div>
       <div class="accordion-tab">
         <button class= "accordion-button btn-green" id="guardian-review">Reviews
