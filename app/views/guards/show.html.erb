@@ -31,7 +31,9 @@
       </div>
       <div class="accordion-tab">
         <button class= "accordion-button btn-green" id="guardian-review">Reviews
-          <%= render 'components/stars', rev: @guard.reviews %>
+          <% if @guard.reviews.empty? == false %>
+            <%= render 'components/stars', rev: @guard.reviews %>
+          <% end %>
           <i class="fas fa-caret-right initial-arrow-down"></i>
         </button>
         <% if @guard.reviews.empty? %>
