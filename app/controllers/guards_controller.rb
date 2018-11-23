@@ -3,9 +3,11 @@ class GuardsController < ApplicationController
   skip_after_action :verify_authorized
 
   def index
-<<<<<<< HEAD
-    @guards = Guard.where.not(latitude: nil, longitude: nil)
-
+    if params[:query].present?
+      @guards = Guard.search_by_name_and_specialty(params[:query])
+    else
+      @guards = Guard.all
+    end
     @markers = @guards.map do |guard|
       {
         lng: guard.longitude,
@@ -13,14 +15,6 @@ class GuardsController < ApplicationController
         infoWindow: { content: render_to_string(partial: "/guards/map_window", locals: { guard: guard }) }
       }
     end
-
-=======
-    if params[:query].present?
-      @guards = Guard.search_by_name_and_specialty(params[:query])
-    else
-      @guards = Guard.all
-    end
->>>>>>> c98c9e558de5d91f7de62bc73146535b7219f0e9
   end
 
   def new
