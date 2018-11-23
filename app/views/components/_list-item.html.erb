@@ -10,14 +10,22 @@
       <% end %>
       <% if booking.completed %>
         <p>MISSION ACCOMPLISHED</p>
+      <% elsif !booking.confirmed %>
+        <p>PENDING MISSION REQUEST</p>
       <% else %>
         <p>ON YOUR MISSION</p>
       <% end %>
     </div>
     <div>
       <div>
-        <%= form_for :booking, url: booking_path(booking), method: :patch do |f| %>
-            <%= f.submit 'Mark Mission as completed', class: 'btn-plain no-padding' %>
+        <% if !booking.confirmed %>
+          <%= form_for :booking, url: cancel_booking_path(booking), method: :patch do |f| %>
+              <%= f.submit 'Cancel', class: 'btn-plain no-padding cancel-btn' %>
+          <% end %>
+        <% else %>
+          <%= form_for :booking, url: booking_path(booking), method: :patch do |f| %>
+              <%= f.submit 'Mark Mission as completed', class: 'btn-plain no-padding complete-btn' %>
+          <% end %>
         <% end %>
       </div>
 

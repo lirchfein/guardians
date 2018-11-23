@@ -4,7 +4,15 @@ class BookingPolicy < ApplicationPolicy
   end
 
   def update?
-    record.user == user
+    record.user == user || record.guard = Guard.where(user_id: user.id).last
+  end
+
+  def cancel?
+    record.user == user || record.guard = Guard.where(user_id: user.id).last
+  end
+
+  def confirm?
+    record.guard = Guard.where(user_id: user.id).last
   end
 
   class Scope < Scope
