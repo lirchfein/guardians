@@ -1,4 +1,4 @@
-.profile {
+.profile-view {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -9,6 +9,28 @@
 
 .profile.btn {
   width: 20vw;
+}
+
+.p-heading {
+  font-weight: bold;
+}
+
+.p-profile {
+  margin-bottom: 0;
+}
+
+.guard-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.heading-guard {
+  margin-top: 7vh;
+}
+
+.rounded-corners {
+  border-radius: 2%;
 }
 
 #bookings-content {
@@ -78,6 +100,8 @@
   }
 }
 
+// modal to become guardian styling
+
 .identity-selecter-buttons {
   display: flex;
   justify-content: space-around;
@@ -90,6 +114,24 @@
   display: flex;
   flex-direction: column;
 }
+
+.fas {
+  color: black;
+}
+
+.modal-footer {
+  border-top: none !important;
+}
+
+.modal-header {
+  border-bottom: none !important;
+}
+
+.modal-content {
+  padding-bottom: 30px;
+}
+
+strong {display: inline !important};
 
 .modal-close-button {
   width: 75px;
