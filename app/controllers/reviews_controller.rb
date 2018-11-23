@@ -16,10 +16,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-  def new
-    @review = Review.new
-  end
-
   private
 
   def params_permit
