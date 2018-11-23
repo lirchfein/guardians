@@ -1,12 +1,18 @@
 class ReviewsController < ApplicationController
+  def new
+    @review = Review.new
+    authorize @review
+  end
+
   def create
-    @guard = params[:guard_id]
+    @guard = Guard.find(params[:guard_id])
     @review = Review.new(params_permit)
     @review.guard = @guard
+    authorize @review
     if @review.save
       redirect_to guard_path(@guard)
-    # else
-      # Do something here!
+    else
+      render 'new'
     end
   end
 
