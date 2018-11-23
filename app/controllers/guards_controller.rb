@@ -8,6 +8,13 @@ class GuardsController < ApplicationController
     else
       @guards = Guard.all
     end
+    @markers = @guards.map do |guard|
+      {
+        lng: guard.longitude,
+        lat: guard.latitude,
+        infoWindow: { content: render_to_string(partial: "/guards/map_window", locals: { guard: guard }) }
+      }
+    end
   end
 
   def new
