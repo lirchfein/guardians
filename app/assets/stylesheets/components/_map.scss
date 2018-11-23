@@ -10,3 +10,10 @@
 .mapboxgl-marker g {
   fill: #4DF67D;
 }
+
+
+.popup-image {
+  width: 200;
+  height: 120;
+  crop: :fill;
+}
