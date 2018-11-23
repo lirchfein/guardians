@@ -36,6 +36,15 @@ class GuardsController < ApplicationController
     end
   end
 
+  def edit
+    @guard = Guard.find(params[:id])
+  end
+
+  def update
+    @guard = Guard.find(params[:id])
+    @guard.update(params[:guard])
+  end
+
   private
 
   def guard_params

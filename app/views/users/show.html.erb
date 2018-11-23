@@ -1,4 +1,4 @@
-<div class="profile">
+<div class="profile-view">
   <%= cl_image_tag "bomb", id:"bomb" %>
   <% if @user.bookings.length >= 1 %>
     <%= cl_image_tag "explosion", id:"explosion" %>
@@ -7,7 +7,7 @@
     <%= cl_image_tag "atom", id:"atom" %>
   <% end %>
   <div class="container profile-header">
-    <%= cl_image_tag(@user.avatar, :transformation=>[
+    <%= cl_image_tag(@user.avatar, class:'img-circle circular', :transformation=>[
   {:width=>500, :height=>500, :gravity=>"face", :radius=>"max", :crop=>"crop"},
   {:width=>200, :crop=>"scale"}
   ]) %>
@@ -17,8 +17,17 @@
   <%= render 'components/tabs', user: @user %>
 
   <!-- booked heroes content -->
-
   <div id='bookings-content' class='show booking-tab'>
+    <% if @user.bookings.empty? %>
+      <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-3">
+          <div class="small-margin-top-bottom">
+            <p class="p-profile">You did not book any guards yet.</p>
+            <p>Start searching for guards to accomplish your missions!</p>
+          </div>
+        </div>
+      </div>
+    <% end %>
     <div class="row list">
       <% @open_bookings.each do |booking| %>
         <div class="col-xs-12 col-md-6 col-md-offset-3">
@@ -45,7 +54,7 @@
     </div>
     <div class="row">
       <div class="col-xs-12 col-md-6 col-md-offset-3">
-        <%= link_to "BOOK ANOTHER HERO", guards_path, class:"btn btn-green btn-lg" %>
+        <%= link_to "BOOK A HERO", guards_path, class:"btn btn-green btn-lg" %>
       </div>
     </div>
   </div>
@@ -54,11 +63,31 @@
 
   <div id="profile-content" class="profile-tab">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
-      <p>First Name: <%= @user.first_name %></p>
-      <p>Last Name: <%= @user.last_name %></p>
-      <p>Email: <%= @user.email %></p>
-      <button class= 'btn btn-green' data-toggle="modal" data-target="#secret-id-check">Become a Guardian!</button>
-      <%= link_to "Edit Profile", edit_user_registration_path(@user), class:'.btn-green'%>
+      <h4 class="p-heading">USER PROFILE DETAILS</h4>
+      <p class="p-profile">First Name: <%= @user.first_name %></p>
+      <p class="p-profile">Last Name: <%= @user.last_name %></p>
+      <p class="p-profile">Email: <%= @user.email %></p>
+      <%= link_to "Edit User Details", edit_user_registration_path(@user), class:'.btn-green'%>
+
+      <% if @guard %>
+        <h4 class="p-heading heading-guard">GUARD DETAILS</h4>
+        <div class="guard-flex">
+          <div>
+            <p class="p-profile">Name: <%= @guard.name %></p>
+            <p class="p-profile">Speciality: <%= @guard.specialty %></p>
+            <p class="p-profile">Rate: <%= @guard.rate %>$</p>
+            <p class="p-profile">HQ: <%= @guard.location %></p>
+            <%= link_to "Edit Guard Details",edit_guard_path(@guard), class:'.btn-green'%>
+          </div>
+          <%= cl_image_tag(@guard.picture[0].url, :class=>'rounded-corners', :width=>100, :height=>100, :crop=>"fill") %>
+        </div>
+
+      <% else %>
+        <div class="center-btn">
+          <button class= 'btn btn-green' data-toggle="modal" data-target="#secret-id-check">Become a Guardian!</button>
+        </div>
+      <% end %>
+
     </div>
 <!-- --------------------------------------MODAL--------------------------------------------------------- -->
       <div class="modal fade" id="secret-id-check" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -69,15 +98,19 @@
               <h4 class="modal-title" id="myModalLabel">Become a Guardian!</h4>
             </div>
             <div class="modal-body">
-              Select whether to use your current identity or create a secret identity!
+              <div id="modal-text">Select whether to use your <strong>current identity</strong> or create a <strong>secret identity</strong>!</div>
               <div class="identity-selecter-buttons">
-                <%= button_to "Current Identity", new_guard_path, :class => "btn btn-green", :method => :get, params: {secret_id: false} %>
-                <%= button_to "Secret Identity", new_guard_path, :class => "btn btn-green", :method => :get, params: {secret_id: true} %>
+                <%= button_to new_guard_path, :class => "btn btn-plain btn-lg btn-strong", :method => :get, params: {secret_id: false} do %>
+                    <p>Current Identity<i class="fas fa-grin-alt"></i></p>
+                <% end %>
+                <%= button_to new_guard_path, :class => "btn btn-plain btn-lg btn-strong", :method => :get, params: {secret_id: true} do %>
+                    <p>Secret Identity<i class="fas fa-mask"></i></p>
+                <% end %>
               </div>
             </div>
-            <div class="modal-footer">
+            <!-- <div class="modal-footer">
               <button type="button" class="btn-green modal-close-button" data-dismiss="modal">Cancel</button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -87,6 +120,16 @@
   <!-- guard content -->
   <% if @guard %>
     <div id="guard-content" class="guard-tab">
+      <% if @guard.bookings.empty? %>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-md-offset-3">
+            <div class="small-margin-top-bottom">
+              <p class="p-profile">No mission requests yet</p>
+              <p>- sharpen your skills to get send on a mission!</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
       <div class="row list">
         <% @guard_open_bookings.each do |booking| %>
           <div class="col-xs-12 col-md-6 col-md-offset-3">

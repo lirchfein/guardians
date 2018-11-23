@@ -17,7 +17,7 @@
 .tab {
   flex: 1 0;
   text-align: center;
-  padding: 15px 0;
+  padding: 15px 0 5px;
   border-bottom: solid 3px $white;
   &.active {
     color: $letter-gray;

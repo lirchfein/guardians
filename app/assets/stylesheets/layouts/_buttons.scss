@@ -23,3 +23,15 @@
     color: $green;
   }
 }
+
+.btn-strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.center-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5vh 0;
+}
