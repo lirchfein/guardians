@@ -27,6 +27,7 @@
   }
 }
 
+
 .tick-button {
   border: none;
   padding: 0;
@@ -90,4 +91,13 @@
 
 .canceled {
   display: none;
+}
+
+#accomplished-p {
+  a {
+    text-decoration: none;
+  }
+  p.review-link {
+    color: $green-secondary;
+  }
 }

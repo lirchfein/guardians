@@ -9,7 +9,12 @@
         <h3><%= booking.guard.name %></h3>
       <% end %>
       <% if booking.completed %>
-        <p>MISSION ACCOMPLISHED</p>
+        <div id='accomplished-p'>
+          <p>MISSION ACCOMPLISHED</p>
+          <%= link_to new_guard_review_path(booking.guard) do %>
+            <p class="review-link">Review <%= booking.guard.name %> for this Mission</p>
+          <% end %>
+        </div>
       <% elsif !booking.confirmed %>
         <p>PENDING MISSION REQUEST</p>
       <% else %>

@@ -1,6 +1,7 @@
 const changeToComplete = (event) => {
   if (event.target.classList.contains("complete-btn")) {
     event.currentTarget.classList.add("completed")
+    //const
   } else if (event.target.classList.contains("cancel-btn")) {
     //console.log(event.Target.innerHTML)
     event.currentTarget.classList.add("canceled");
