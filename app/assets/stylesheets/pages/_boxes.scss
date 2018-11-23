@@ -14,6 +14,7 @@
   height: -webkit-fill-available;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .registration-background {
@@ -23,6 +24,7 @@
   margin-top: -8vh;
   margin-bottom: -16vh;
   display: flex;
+  align-items: flex-start;
 }
 
 .edit-background {
