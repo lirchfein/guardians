@@ -42,7 +42,12 @@ class GuardsController < ApplicationController
 
   def update
     @guard = Guard.find(params[:id])
-    @guard.update(params[:guard])
+    @guard.update(guard_params)
+    if @guard.save
+      redirect_to user_path(current_user)
+    else
+      render 'edit'
+    end
   end
 
   private
