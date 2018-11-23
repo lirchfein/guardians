@@ -31,9 +31,18 @@
       </div>
       <div class="accordion-tab">
         <button class= "accordion-button btn-green" id="guardian-review">Reviews
+          <%= render 'components/stars', rev: @guard.reviews %>
           <i class="fas fa-caret-right initial-arrow-down"></i>
         </button>
-        <p class= 'toggle-text'>This is a review</p>
+        <% if @guard.reviews.empty? %>
+          <p class="toggle-text">No Reviews yet :( </p>
+        <% else %>
+         <div class="toggle-text">
+          <% @guard.reviews.each do |review|%>
+             <p class= 'review'><%= review.content %></p>
+           <% end %>
+         </div>
+        <% end %>
       </div>
     </div>
 
