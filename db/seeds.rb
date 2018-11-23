@@ -21,6 +21,7 @@ u3 = User.create!(first_name: 'Wiebke', last_name: 'Rost', email: 'wi@lewagon.co
 
 puts "creating guards..."
 #guard = Guard.create!(user_id: 1, name: 'Legolas', specialty: 'nice hair', available: false, location: 'Treptower Park', rate: 5000, picture: 'https://res.cloudinary.com/dfcud6por/image/upload/c_fill,h_700,w_700/v1542721286/legolas_profile.jpg', cover: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542720254/Legolas.jpg')
+
 a = Guard.new(user_id: u1.id, name: 'Darth Vader', specialty: 'faceless', location: 'Alexanderplatz', rate: 700000, description: 'Smart guy, but breathing issues' )
 a.remote_picture_urls = ['https://res.cloudinary.com/dfcud6por/image/upload/c_fill,h_700,w_700/v1542715217/Darth_Vader.jpg', 'https://res.cloudinary.com/dfcud6por/image/upload/v1542722276/Star-Wars-Darth-Vader-Wallpaper.jpg']
 a.save
@@ -29,7 +30,7 @@ b.remote_picture_urls = [ 'https://res.cloudinary.com/dfcud6por/image/upload/c_f
 b.save
 c = Guard.new(user_id: u3.id, name: 'Bronn', specialty: 'drunkard', location: 'Berliner Dom', rate: 500, description: 'Bronn is a top bloke')
 c.remote_picture_urls = ['https://res.cloudinary.com/dfcud6por/image/upload/c_fill,h_700,w_700/v1542715217/bronn.jpg', 'https://res.cloudinary.com/dfcud6por/image/upload/v1542722274/Bronn-game-of-thrones-22077692-1024-576.png' ]
-c.save
+c.save!
 #Guard.create!(user_id: 5, name: 'Thor', specialty: 'strong', location: 'Kottbusser Tor', rate: 70000, picture: 'https://res.cloudinary.com/dfcud6por/image/upload/c_fill,h_700,w_700/v1542721686/thor-profile.jpg', cover: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542715221/thor.jpg')
 # Guard.create!(name: 'Batman', specialty: 'strong', location: 'Warschauer Straße, Berlin', rate: 3000, picture: 'https://res.cloudinary.com/dfcud6por/image/upload/c_fill,h_700,w_700/v1542715217/batman.jpg', cover: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542722266/Batman_cover.png' )
 # Guard.create!(name: 'Groot', specialty: 'strong', location: 'Monbijou Park, Oranienburger Straße, Berlin', rate: 200, picture: 'https://res.cloudinary.com/dfcud6por/image/upload/c_fill,h_700,w_700/v1542715218/groot.jpg', cover: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542722276/Groot_cover.jpg' )
