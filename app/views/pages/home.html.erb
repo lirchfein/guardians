@@ -1,5 +1,6 @@
 <%= render 'components/banner' %>
 <div class="container">
+<div class="small-margin-top-bottom">
   <div class="row">
     <% @top_guards.each do |guard| %>
       <div class="col-xs-12 col-sm-6 col-md-4">
@@ -10,4 +11,5 @@
   <div class="button-center">
     <%= link_to "SEE ALL HEROES", guards_path, class:"btn btn-green btn-lg" %>
   </div>
+</div>
 </div>

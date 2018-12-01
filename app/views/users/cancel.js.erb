@@ -1,0 +1,6 @@
+function cancelMission() {
+  const canceledListItem = document.getElementById('<%= @booking.id %>');
+  canceledListItem.parentNode.removeChild(canceledListItem);
+}
+
+cancelMission();

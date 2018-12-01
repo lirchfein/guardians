@@ -1,0 +1,11 @@
+function confirmMission() {
+  const acceptedListItem = document.getElementById('<%= @booking.id %>');
+  console.log(acceptedListItem);
+  const html = "<%= j render 'components/list-item-guard-view', booking: @booking %>";
+  acceptedListItem.innerHTML = html;
+  <% @unconfirmed_bookings.each do |unconfirmed_booking| %>
+     document.getElementById('<%= unconfirmed_booking.id %>').innerHTML = "<%= j render 'components/list-item-guard-view', booking: unconfirmed_booking %>";
+  <% end %>
+}
+
+confirmMission();

@@ -73,7 +73,7 @@
   position: absolute;
   width: 14vw;
   //top: 842px;
-  bottom: -85px;
+  bottom: 30px;
   left: 80px;
 }
 
@@ -103,16 +103,15 @@
 // modal to become guardian styling
 
 .identity-selecter-buttons {
-  display: flex;
+
   justify-content: space-around;
-  width: 60%;
+  width: 100%;
   align-self: center;
   margin-top: 20px;
 }
 
 .modal-body {
-  display: flex;
-  flex-direction: column;
+  //position: relative;
 }
 
 .fas {
@@ -123,12 +122,38 @@
   border-top: none !important;
 }
 
+.identity-option {
+  padding: 10px 10px;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+  font-family: $headers-font;
+  color: $green;
+  border-radius: 25px;
+  border: solid 0.5px $green;
+  p {
+    margin: 0;
+  }
+  &:hover {
+    background-color: $green;
+    a {
+      color: $letter-gray;
+    }
+  }
+  a {
+    &:hover {
+      color: $letter-gray;
+    }
+  }
+}
+
 .modal-header {
   border-bottom: none !important;
 }
 
 .modal-content {
-  padding-bottom: 30px;
 }
 
 strong {display: inline !important};

@@ -27,17 +27,17 @@
     <div>
       <div>
         <% if !booking.confirmed %>
-          <%= form_for :booking, url: cancel_booking_path(booking), method: :patch do |f| %>
-              <%= f.submit 'Cancel', class: 'btn-plain no-padding cancel-btn' %>
+          <%= link_to cancel_booking_path(booking), remote: true do |f| %>
+              <p class='btn-plain no-padding cancel-btn'>Cancel Mission</p>
           <% end %>
         <% else %>
-          <%= form_for :booking, url: booking_path(booking), method: :patch do |f| %>
-              <%= f.submit 'Mark Mission as completed', class: 'btn-plain no-padding complete-btn' %>
+          <%= link_to complete_mission_path(booking), remote: true do |f| %>
+              <p class='btn-plain no-padding complete-btn'>Mark Mission as completed</p>
           <% end %>
         <% end %>
       </div>
 
-      <%= cl_image_tag "tick-full", id:'tick-full'%>
+      <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1542812431/Components/tick-full.svg", id:'tick-full'%>
     </div>
 
 

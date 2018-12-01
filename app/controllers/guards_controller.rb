@@ -22,8 +22,12 @@ class GuardsController < ApplicationController
   end
 
   def show
-    @user = current_user
     @guard = Guard.find(params[:id])
+    @user = current_user
+    if current_user
+      @pendingBookings = @user.bookings.select { |booking| !booking.confirmed }
+      @pending_mission_request = @pendingBookings.any? { |pending_booking| pending_booking.guard_id == @guard.id }
+    end
   end
 
   def create

@@ -6,19 +6,25 @@
     </div>
   </div>
 
+
+  <div class="right-side-guards">
   <div class="availability-render">
     <%= render 'components/availability_symbol', gu: @guard %>
   </div>
-
-  <div class="right-side-guards">
 
     <div class="guard-main-info">
       <h1><%= @guard.name %></h1>
       <p class= 'specialty-text'>Specialty: <%= @guard.specialty.capitalize %></p>
       <p class= 'specialty-text'>Head Quarter: <%= @guard.location.capitalize %></p>
       <p class= 'specialty-text rate'><%= @guard.rate %> $</p>
-      <%= form_for :booking, url: guard_bookings_path(@guard), method: :post do |f| %>
-        <%= f.submit 'Book', class: 'btn-green book-button-guard'%>
+      <% if @pending_mission_request %>
+        <%= form_for :booking, url: guard_bookings_path(@guard), method: :post do |f| %>
+          <%= f.submit 'Pending Mission Request', class: 'btn-green btn-longer-gray', id:'book-button-guard', disabled: true%>
+        <% end %>
+      <% else %>
+        <%= form_for :booking, url: guard_bookings_path(@guard), method: :post do |f| %>
+          <%= f.submit 'Book', class: 'btn-green book-button-guard'%>
+        <% end %>
       <% end %>
     </div>
 

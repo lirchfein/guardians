@@ -49,3 +49,13 @@
   background-position: 100% center;
 }
 
+@media screen {
+
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
+

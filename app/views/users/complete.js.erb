@@ -1,0 +1,15 @@
+function completeMission() {
+  const completedListItem = document.getElementById('<%= @booking.id %>');
+  console.log(completedListItem);
+  <% if @booking.guard.user == current_user %>
+    const html = "<%= j render 'components/list-item-guard-view', booking: @booking %>";
+  <% else %>
+    const html = "<%= j render 'components/list-item', booking: @booking %>";
+  <% end %>
+  completedListItem.innerHTML = html;
+  <% @unconfirmed_bookings.each do |unconfirmed_booking| %>
+     document.getElementById('<%= unconfirmed_booking.id %>').innerHTML = "<%= j render 'components/list-item-guard-view', booking: unconfirmed_booking %>";
+  <% end %>
+}
+
+completeMission();
