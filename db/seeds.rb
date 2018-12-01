@@ -11,19 +11,19 @@ Guard.destroy_all
 User.destroy_all
 
 puts "creating users..."
-u1 = User.create!(first_name: 'Paul', last_name: 'Pope', email: 'pa@lewagon.com', password: 'tralalala', avatar: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
-User.create!(first_name: 'Peter', last_name: 'Fox', email: 'pe@lewagon.com', password: 'tralalala', avatar: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
-User.create!(first_name: 'Wiebke', last_name: 'Rost', email: 'wi@lewagon.com', password: 'tralalala', avatar: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
-User.create!(first_name: 'Marton', last_name: 'Barcza', email: 'ma@lewagon.com', password: 'tralalala', avatar: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724075/marton-profile.jpg')
-User.create!(first_name: 'Sophie', last_name: 'Rost', email: 'so@lewagon.com', password: 'tralalala', avatar: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
-User.create!(first_name: 'Peter', last_name: 'Parker', email: 'peter@lewagon.com', password: 'tralalala', avatar: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542982486/peter_parker.jpg' )
-User.create!(first_name: 'Clark', last_name: 'Kent', email: 'clark@lewagon.com', password: 'tralalala', avatar: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
-User.create!(first_name: 'Bla', last_name: 'Bla', email: 'bla@lewagon.com', password: 'tralalala', avatar: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
-User.create!(first_name: 'Sophie', last_name: 'Rost', email: 'si@lewagon.com', password: 'tralalala', avatar: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
-User.create!(first_name: 'Sophie', last_name: 'Rost', email: 'sp@lewagon.com', password: 'tralalala', avatar: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
-User.create!(first_name: 'Sophie', last_name: 'Rost', email: 'spa@lewagon.com', password: 'tralalala', avatar: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
-User.create!(first_name: 'Sophie', last_name: 'Rost', email: 'spo@lewagon.com', password: 'tralalala', avatar: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
-User.create!(first_name: 'Sophie', last_name: 'Rost', email: 'spi@lewagon.com', password: 'tralalala', avatar: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
+u1 = User.create!(first_name: 'Paul', last_name: 'Pope', email: 'pa@lewagon.com', password: 'tralalala', remote_avatar_url: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
+User.create!(first_name: 'Peter', last_name: 'Fox', email: 'pe@lewagon.com', password: 'tralalala', remote_avatar_url: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
+User.create!(first_name: 'Wiebke', last_name: 'Rost', email: 'wi@lewagon.com', password: 'tralalala', remote_avatar_url: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
+User.create!(first_name: 'Marton', last_name: 'Barcza', email: 'ma@lewagon.com', password: 'tralalala', remote_avatar_url: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724075/marton-profile.jpg')
+User.create!(first_name: 'Sophie', last_name: 'Rost', email: 'so@lewagon.com', password: 'tralalala', remote_avatar_url: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
+User.create!(first_name: 'Peter', last_name: 'Parker', email: 'peter@lewagon.com', password: 'tralalala', remote_avatar_url: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542982486/peter_parker.jpg' )
+User.create!(first_name: 'Clark', last_name: 'Kent', email: 'clark@lewagon.com', password: 'tralalala', remote_avatar_url: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
+User.create!(first_name: 'Bla', last_name: 'Bla', email: 'bla@lewagon.com', password: 'tralalala', remote_avatar_url: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
+User.create!(first_name: 'Sophie', last_name: 'Rost', email: 'si@lewagon.com', password: 'tralalala', remote_avatar_url: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
+User.create!(first_name: 'Sophie', last_name: 'Rost', email: 'sp@lewagon.com', password: 'tralalala', remote_avatar_url: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
+User.create!(first_name: 'Sophie', last_name: 'Rost', email: 'spa@lewagon.com', password: 'tralalala', remote_avatar_url: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
+User.create!(first_name: 'Sophie', last_name: 'Rost', email: 'spo@lewagon.com', password: 'tralalala', remote_avatar_url: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
+User.create!(first_name: 'Sophie', last_name: 'Rost', email: 'spi@lewagon.com', password: 'tralalala', remote_avatar_url: 'https://res.cloudinary.com/dfcud6por/image/upload/v1542724324/Sophie-Marceau_width1024.jpg' )
 
 
 

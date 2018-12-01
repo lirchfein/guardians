@@ -29,7 +29,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def after_sign_in_path_for(resource)
-    stored_location_for(resource)
+    stored_location_for(resource) || root_path
   end
 
   def store_location
@@ -38,6 +38,7 @@ class ApplicationController < ActionController::Base
         request.fullpath != "/users/sign_up" &&
         request.fullpath != "/users/password" &&
         request.fullpath != "/users/sign_out" &&
+        request.fullpath != "/users" &&
         !request.xhr?) # don't store ajax calls
       session["user_return_to"] = request.fullpath
     end

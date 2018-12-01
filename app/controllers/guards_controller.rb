@@ -29,6 +29,13 @@ class GuardsController < ApplicationController
   def create
     @guard = Guard.new(guard_params)
     @guard.user_id = current_user.id
+    if @guard.cover_pic.file.nil?
+      @guard.remote_cover_pic_url = "https://res.cloudinary.com/dfcud6por/image/upload/v1543676026/Guardians/placeholder_background.png"
+    end
+    if @guard.profile_pic.file.nil?
+      @guard.remote_profile_pic_url = "https://res.cloudinary.com/dfcud6por/image/upload/v1543679242/Guardians/placeholder_profile.png"
+    end
+
     if @guard.save
       redirect_to user_path(current_user)
     else

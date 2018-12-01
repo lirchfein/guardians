@@ -1,7 +1,7 @@
 <div class="edit-background">
-  <%= cl_image_tag "bomb", id:"bomb" %>
-  <%= cl_image_tag "explosion", id:"explosion" %>
-  <%= cl_image_tag "atom", id:"atom" %>
+  <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1542812430/Guardians/bomb.svg", id:"bomb" %>
+  <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1542812430/Guardians/explosion.svg", id:"explosion" %>
+  <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1542812485/Guardians/atom.svg", id:"atom" %>
   <div class="sign-box edit-box">
 
     <h2>Edit <%= resource_name.to_s.humanize %></h2>
@@ -13,7 +13,7 @@
         <%= f.input :email, required: true, autofocus: true %>
         <%= f.input :first_name %>
         <%= f.input :last_name %>
-        <%= f.input :avatar %>
+        <%= f.input :avatar, input_html: {value: "#{current_user.avatar}"}%>
         <%= f.input :avatar_cache, as: :hidden %>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

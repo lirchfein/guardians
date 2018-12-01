@@ -9,16 +9,16 @@
         <%= f.input :name %>
         <%= f.input :specialty, placeholder: "For example: Strong, Flying, Invisibilty."%>
         <%= f.input :rate %>
-        <%= f.label 'Profile Picture' %>
-        <%= f.file_field :picture, multiple: true%>
-        <%= f.label 'Cover Photo' %>
-        <%= f.file_field :picture, multiple: true%>
+        <%= f.input :profile_pic, input_html: {value: "#{@guard.profile_pic}"} %>
+        <%= f.input :profile_pic_cache, as: :hidden %>
+        <%= f.input :cover_pic, input_html: {value: "#{@guard.cover_pic}"} %>
+        <%= f.input :cover_pic_cache, as: :hidden %>
         <%= f.input :location, label: 'Head Quarter Location' %>
         <%= f.input :description %>
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Create", class:'btn-green btn-large' %>
+        <%= f.button :submit, "Update", class:'btn-green btn-large' %>
       </div>
     <% end %>
   </div>
