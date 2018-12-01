@@ -3,7 +3,7 @@ class BookingPolicy < ApplicationPolicy
     true
   end
 
-  def update?
+  def complete?
     record.user == user || record.guard = Guard.where(user_id: user.id).last
   end
 

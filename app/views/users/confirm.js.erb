@@ -1,0 +1,8 @@
+function confirmMission() {
+  const acceptedListItem = document.getElementById('<%= @booking.id %>');
+  console.log(acceptedListItem);
+  const html = "<%= j render 'components/list-item-guard-view', booking: @booking %>";
+  acceptedListItem.innerHTML = html;
+}
+
+confirmMission();
