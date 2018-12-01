@@ -1,5 +1,5 @@
-<div class="popup-image">
-  <%= cl_image_tag(guard.cover_pic) %>
+<div class="popup-image" style ="background-image: url('<%= cl_image_path(guard.cover_pic) %>'); background-size: cover !important;
+  background-position: top;">
 </div>
 <h4> <%= link_to guard.name, guard_path(guard.id) %></h4>
 

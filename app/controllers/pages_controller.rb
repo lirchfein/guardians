@@ -5,6 +5,9 @@ class PagesController < ApplicationController
     @top_guards = Guard.limit(3)
   end
 
+  def about
+  end
+
   def authorization
   end
 end

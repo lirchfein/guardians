@@ -3,7 +3,7 @@
   color: $letter-gray;
   position: relative;
   margin: 10px;
-  box-shadow: 1px 1px 2px $light-gray;
+  box-shadow: 2px 2px 5px $gray-secondary;
   border-radius: 5px;
   transition: 0.25s;
   img {
@@ -71,8 +71,9 @@
 }
 
 .card-guard-avatar {
-  img{
-    height: 50px;
-    width: 50px;
-  }
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px black;
 }

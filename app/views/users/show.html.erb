@@ -1,10 +1,10 @@
 <div class="profile-view">
-  <%= cl_image_tag "bomb", id:"bomb" %>
+  <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1542812430/Guardians/bomb.svg", id:"bomb" %>
   <% if @user.bookings.length >= 1 %>
-    <%= cl_image_tag "explosion", id:"explosion" %>
+    <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1542812430/Guardians/explosion.svg", id:"explosion" %>
   <% end %>
   <% if @user.bookings.length >= 5 %>
-    <%= cl_image_tag "atom", id:"atom" %>
+    <%= cl_image_tag "https://res.cloudinary.com/dfcud6por/image/upload/v1542812485/Guardians/atom.svg", id:"atom" %>
   <% end %>
   <div class="container profile-header">
     <%= cl_image_tag(@user.avatar, class:'img-circle circular', :transformation=>[
@@ -100,12 +100,16 @@
             <div class="modal-body">
               <div id="modal-text">Select whether to use your <strong>current identity</strong> or create a <strong>secret identity</strong>!</div>
               <div class="identity-selecter-buttons">
-                <%= button_to new_guard_path, :class => "btn btn-plain btn-lg btn-strong", :method => :get, params: {secret_id: false} do %>
-                    <p>Current Identity<i class="fas fa-grin-alt"></i></p>
-                <% end %>
-                <%= button_to new_guard_path, :class => "btn btn-plain btn-lg btn-strong", :method => :get, params: {secret_id: true} do %>
-                    <p>Secret Identity<i class="fas fa-mask"></i></p>
-                <% end %>
+                <div class="identity-option">
+                  <%= link_to new_guard_path, :method => :get, params: {secret_id: false} do %>
+                      <p>Real Identity - take over information from your user profile<i class="fas fa-grin-alt"></i></p>
+                  <% end %>
+                </div>
+                <div class="identity-option">
+                  <%= link_to new_guard_path, :method => :get, params: {secret_id: true} do %>
+                      <p>Secret Identity - keep your real identity hidden<i class="fas fa-mask"></i></p>
+                  <% end %>
+                </div>
               </div>
             </div>
             <!-- <div class="modal-footer">
