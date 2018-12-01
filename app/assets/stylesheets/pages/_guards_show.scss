@@ -6,12 +6,14 @@
   height: 100vh;
   width: 100vw;
   position: relative;
+  margin-top: -8vh;
+  padding-top: 8vh;
 }
 
 .guard-pic {
   background-size: cover;
   background-position: center;
-  height: 123%;
+  height: 100vh;
   width: 50vw;
   margin-top: -8vh;
 }
@@ -51,7 +53,7 @@
 }
 
 #book-button-guard {
-  width: 75px;
+  //width: 75px;
   transition: 0.25s ease;
   padding: 7px;
   background-color: $light-gray;
@@ -95,6 +97,6 @@
 
 .availability-render {
   position: absolute;
-  top: 10px;
+  top: 40px;
   right: 7.5%;
 }
