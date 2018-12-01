@@ -3,7 +3,10 @@
 <% else %>
   <div class="list-item">
 <% end %>
-    <%= cl_image_tag(booking.guard.picture[0].url, :class=>'rounded-corners', :width=>100, :height=>100, :crop=>"fill") %>
+
+
+
+    <%= cl_image_tag(booking.guard.profile_pic, :class=>'rounded-corners', :width=>100, :height=>100, :crop=>"fill") %>
     <div class="list-content">
       <%= link_to guard_path(booking.guard), class: 'list-link' do %>
         <h3><%= booking.guard.name %></h3>
@@ -36,4 +39,7 @@
 
       <%= cl_image_tag "tick-full", id:'tick-full'%>
     </div>
+
+
+
   </div>
