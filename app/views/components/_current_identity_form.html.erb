@@ -9,10 +9,8 @@
         <%= f.input :name, input_html: {value: "#{current_user.first_name} #{current_user.last_name}"}%>
         <%= f.input :specialty, placeholder: "For example: Strong, Flying, Invisibilty."%>
         <%= f.input :rate %>
-        <%= f.label 'Profile Photo' %>
         <%= f.input :profile_pic %>
         <%= f.input :profile_pic_cache, as: :hidden %>
-        <%= f.label 'Cover Photo' %>
         <%= f.input :cover_pic %>
         <%= f.input :cover_pic_cache, as: :hidden %>
         <%= f.input :location, label: 'Head Quarter Location' %>
