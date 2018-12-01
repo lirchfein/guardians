@@ -7,6 +7,9 @@ function completeMission() {
     const html = "<%= j render 'components/list-item', booking: @booking %>";
   <% end %>
   completedListItem.innerHTML = html;
+  <% @unconfirmed_bookings.each do |unconfirmed_booking| %>
+     document.getElementById('<%= unconfirmed_booking.id %>').innerHTML = "<%= j render 'components/list-item-guard-view', booking: unconfirmed_booking %>";
+  <% end %>
 }
 
 completeMission();

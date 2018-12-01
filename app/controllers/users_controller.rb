@@ -22,6 +22,7 @@ class UsersController < ApplicationController
     authorize @booking
     @booking.confirmed = true
     @booking.save
+    @unconfirmed_bookings = @booking.guard.bookings.reject(&:confirmed)
     @booking.guard.available = false
     @booking.guard.save
     respond_to do |format|
@@ -37,6 +38,7 @@ class UsersController < ApplicationController
     @booking.save
     @booking.guard.available = true
     @booking.guard.save
+    @unconfirmed_bookings = @booking.guard.bookings.reject(&:confirmed)
     respond_to do |format|
       format.html { redirect_to user_path(current_user) }
       format.js # <-- will render `app/views/users/confirm.js.erb`

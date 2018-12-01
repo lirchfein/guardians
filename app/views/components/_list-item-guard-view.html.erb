@@ -24,16 +24,18 @@
           <div id='accept-form'>
 
             <% if !booking.confirmed %>
-                  <%= link_to confirm_path(booking), remote: true do |f| %>
-                      <p class='btn-plain no-padding accept-btn'>Accept Mission</p>
-                  <% end %>
-                  <%= link_to cancel_booking_path(booking), remote: true do |f| %>
-                      <p class='btn-plain no-padding cancel-btn'>Reject Mission</p>
-                  <% end %>
+                <% if booking.guard.available %>
+                    <%= link_to confirm_path(booking), remote: true do |f| %>
+                        <p class='btn-plain no-padding accept-btn'>Accept Mission</p>
+                    <% end %>
+                <% end %>
+                <%= link_to cancel_booking_path(booking), remote: true do |f| %>
+                    <p class='btn-plain no-padding cancel-btn'>Reject Mission</p>
+                <% end %>
             <% elsif !booking.completed %>
-                  <%= link_to complete_mission_path(booking), remote: true do |f| %>
-                      <p class='btn-plain no-padding complete-btn'>Mark Mission as completed</p>
-                  <% end %>
+                    <%= link_to complete_mission_path(booking), remote: true do |f| %>
+                        <p class='btn-plain no-padding complete-btn'>Mark Mission as completed</p>
+                    <% end %>
             <% end %>
 
           </div>
