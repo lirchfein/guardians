@@ -79,7 +79,7 @@
             <p class="p-profile">HQ: <%= @guard.location %></p>
             <%= link_to "Edit Guard Details",edit_guard_path(@guard), class:'.btn-green'%>
           </div>
-          <%= cl_image_tag(@guard.picture[0].url, :class=>'rounded-corners', :width=>100, :height=>100, :crop=>"fill") %>
+          <%= cl_image_tag(@guard.profile_pic, :class=>'rounded-corners', :width=>100, :height=>100, :crop=>"fill") %>
         </div>
 
       <% else %>

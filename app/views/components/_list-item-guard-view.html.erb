@@ -3,33 +3,41 @@
 <% else %>
   <div class="list-item">
 <% end %>
-    <%= cl_image_tag(booking.user.avatar, :width=>100, :height=>100, :crop=>"fill") %>
-    <div class="list-content">
+
+
+
+      <%= cl_image_tag(booking.user.avatar, :width=>100, :height=>100, :crop=>"fill") %>
+
+      <div class="list-content">
         <h3><%= booking.user.first_name %> <%= booking.user.last_name %></h3>
-      <% if booking.completed %>
-        <p>MISSION ACCOMPLISHED</p>
-      <% elsif booking.confirmed %>
-        <p>MISSION ONGOING</p>
-      <% else %>
-        <p id='mission-status'>PENDING REQUEST</p>
-      <% end %>
-    </div>
-    <div>
-      <div id='accept-form'>
-        <% if !booking.confirmed %>
-          <%= form_for :booking, url: confirm_path(booking), method: :patch, html: {id: 'accept-partial'} do |f| %>
-              <%= f.submit 'Accept Mission', class: 'btn-plain no-padding accept-btn' %>
-          <% end %>
-          <%= form_for :booking, url: cancel_booking_path(booking), method: :patch do |f| %>
-              <%= f.submit 'Reject Mission', class: 'btn-plain no-padding cancel-btn' %>
-          <% end %>
-        <% elsif !booking.completed %>
-          <%= form_for :booking, url: booking_path(booking), method: :patch do |f| %>
-              <%= f.submit 'Mark Mission as completed', class: 'btn-plain no-padding complete-btn' %>
-          <% end %>
+        <% if booking.completed %>
+          <p>MISSION ACCOMPLISHED</p>
+        <% elsif booking.confirmed %>
+          <p>MISSION ONGOING</p>
+        <% else %>
+          <p id='mission-status'>PENDING REQUEST</p>
         <% end %>
       </div>
+        <div>
+          <div id='accept-form'>
 
-      <%= cl_image_tag "tick-full", id:'tick-full'%>
-    </div>
+            <% if !booking.confirmed %>
+                  <%= form_for :booking, url: confirm_path(booking), method: :patch, html: {id: 'accept-partial'} do |f| %>
+                      <%= f.submit 'Accept Mission', class: 'btn-plain no-padding accept-btn' %>
+                  <% end %>
+                  <%= form_for :booking, url: cancel_booking_path(booking), method: :patch do |f| %>
+                      <%= f.submit 'Reject Mission', class: 'btn-plain no-padding cancel-btn' %>
+                  <% end %>
+            <% elsif !booking.completed %>
+                  <%= form_for :booking, url: booking_path(booking), method: :patch do |f| %>
+                      <%= f.submit 'Mark Mission as completed', class: 'btn-plain no-padding complete-btn' %>
+                  <% end %>
+            <% end %>
+          </div>
+          <!-- if booking is neither "not confirmed" nor "not completed", it's completed: -->
+          <%= cl_image_tag "tick-full", id:'tick-full'%>
+        </div>
+
+
+
   </div>
