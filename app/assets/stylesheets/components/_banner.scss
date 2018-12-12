@@ -24,3 +24,21 @@
 .banner-content {
   margin-left: 8vw;
 }
+
+
+@media only screen and (max-width: 500px) {
+  .banner {
+    background-position: center;
+  }
+  .banner-content {
+    margin-top: 350px;
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+      opacity: 0.85;
+      padding-right: 140px;
+    }
+  }
+}
