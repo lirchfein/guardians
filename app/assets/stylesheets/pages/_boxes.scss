@@ -29,6 +29,24 @@
   background: white;
 }
 
+.pw-reset-shared-links {
+  .links-block {
+    display: flex;
+    div {
+      width: 50%;
+      padding: 0 10px;
+    }
+    div:last-child {
+      padding: 0 40px;
+    }
+  }
+  > * {
+  //max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  }
+}
+
 .sign-box {
   background-color: $light-gray;
   // height: 440px;
