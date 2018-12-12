@@ -11,7 +11,6 @@
   background-size: cover;
   margin-top: -8vh;
   margin-bottom: -16vh;
-  height: -webkit-fill-available;
   display: flex;
   justify-content: center;
 }
@@ -41,7 +40,6 @@
     }
   }
   > * {
-  //max-width: 400px;
   text-align: center;
   margin: 0 auto;
   }
@@ -49,9 +47,15 @@
 
 .sign-box {
   background-color: $light-gray;
-  // height: 440px;
   width: 600px;
-  margin: auto;
+  padding: 20px 30px;
+  border-radius: 25px;
+  margin: 100px auto 160px;
+}
+
+.reset-pw-box {
+  background-color: $light-gray;
+  width: 600px;
   padding: 20px 30px;
   border-radius: 25px;
   margin: 100px auto 160px;
