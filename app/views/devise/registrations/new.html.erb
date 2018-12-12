@@ -1,4 +1,4 @@
-<div class="registration-background" style='background-image: url("<%= cl_image_path 'https://res.cloudinary.com/dfcud6por/image/upload/v1543589777/xjrgvcu3e75vxneihlzg.jpg' %>");'>
+<div class="registration-background" style='background-image: url("<%= cl_image_path 'https://res.cloudinary.com/dfcud6por/image/upload/v1543997566/f0dkpptkomggwaxxvxyg.jpg' %>");'>
   <div class="sign-box registration-box">
 
     <h2>Sign up</h2>
@@ -7,20 +7,31 @@
       <%= f.error_notification %>
 
       <div class="form-inputs">
+        <div class="row">
+          <div class="col-xs-6">
+            <%= f.input :first_name %>
+          </div>
+          <div class="col-xs-6">
+            <%= f.input :last_name %>
+          </div>
+        </div>
         <%= f.input :email,
                     required: true,
                     autofocus: true ,
                     input_html: { autocomplete: "email" }%>
-        <%= f.input :password,
-                    required: true,
-                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                    input_html: { autocomplete: "new-password" } %>
-        <%= f.input :password_confirmation,
-                    required: true,
-                    input_html: { autocomplete: "new-password" } %>
-
-        <%= f.input :first_name %>
-        <%= f.input :last_name %>
+        <div class="row">
+          <div class="col-xs-6">
+          <%= f.input :password,
+                      required: true,
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      input_html: { autocomplete: "new-password" } %>
+          </div>
+          <div class="col-xs-6">
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
+          </div>
+        </div>
         <%= f.input :avatar, input_html: {value: "https://res.cloudinary.com/dfcud6por/image/upload/v1543675818/Guardians/placeholder_profile.png"} %>
         <%= f.input :avatar_cache, as: :hidden %>
 
