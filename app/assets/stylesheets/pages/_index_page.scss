@@ -19,3 +19,24 @@
   position: sticky;
   top: 0;
 }
+
+
+@media screen and (max-width: 520px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .index-cards-container {
+    width: 100%
+  }
+  .map-container {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: static;
+    height: auto;
+  }
+  #map {
+    height: 350px !important;
+  }
+}

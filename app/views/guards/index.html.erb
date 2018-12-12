@@ -4,7 +4,7 @@
       <h2>All Heroes</h2>
       <% @guards.each do |g| %>
         <% unless g.user == current_user %>
-          <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="col-xs-12 col-md-6">
 
             <%= link_to (render 'components/card', gua: g), guard_path(g.id) %>
           </div>
