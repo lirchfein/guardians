@@ -43,3 +43,12 @@
   justify-content: space-around;
   padding: 5vh 0;
 }
+
+@media only screen and (max-width: 500px) {
+  .btn-lg.btn-mobile-opti {
+    padding: 6px 12px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}
+
