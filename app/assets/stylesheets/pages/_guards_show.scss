@@ -100,3 +100,24 @@
   top: 40px;
   right: 7.5%;
 }
+
+
+@media only screen and (max-width: 500px) {
+  .right-side-guards {
+    width: 85%;
+  }
+  .main-box-guards {
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+    margin-top: -8vh;
+    padding-top: 0;
+  }
+  .guard-pic {
+    background-position: top;
+    height: 60vh;
+    width: 100vw;
+    margin-top: 0;
+  }
+
+}
