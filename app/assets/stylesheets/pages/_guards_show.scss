@@ -119,5 +119,15 @@
     width: 100vw;
     margin-top: 0;
   }
-
+  .availability-render {
+    position: static;
+    text-align: right;
+    margin-top: 20px;
+  }
+  .guard-main-info {
+    margin-top: 20px;
+    &> h1 {
+    margin-top: 0px;
+    }
+  }
 }
